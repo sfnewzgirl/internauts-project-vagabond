@@ -1,4 +1,4 @@
-class UserController < ApplicationController
+class UsersController < ApplicationController
   def show
     @user = User.find_by_id[:id]
   end
@@ -6,7 +6,7 @@ class UserController < ApplicationController
     @user = User.new
   end
   def create
-    user = User.create(user_params)
+    user = User.new(user_params)
   end
   def edit
   end
