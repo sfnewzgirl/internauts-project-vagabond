@@ -10,8 +10,8 @@
   </div>
 
   <div class="post">
-      <% Post.all.each do |post| %>
-        <%= post.title %><br>
+      <% @user.posts.each do |post| %>
+        <%= link_to post.title, post_path(post) %><br>
         <%= post.author %><br>
         <%= post.content %>
         <div class="glyph">
