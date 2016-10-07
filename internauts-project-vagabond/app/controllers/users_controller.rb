@@ -9,6 +9,7 @@ class UsersController < ApplicationController
     user = User.new(user_params)
 
     if user.save
+      login(user)
       redirect_to user_path(user.id)
     else
       flash[:sign_up_error] = "Something went wrong, please try again"
