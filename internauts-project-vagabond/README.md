@@ -22,5 +22,3 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
-
->>>>>>> f381c2ad3a33a178aa12b6050ebe484488fdfbb8
