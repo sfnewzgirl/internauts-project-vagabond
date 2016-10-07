@@ -1,0 +1,11 @@
+<h1><%= @city.name %></h1>
+
+<%= image_tag @city.photo %><br>
+
+
+<% @city.posts.each do |post| %>
+	<%= link_to post.title, @post %>
+<% end %>
+
+
+
