@@ -5,13 +5,13 @@
   <%= f.text_field :name, placeholder: "John Doe"  %> <br>
 
   <%= f.label "Email"  %>
-  <%= f.text_field :name, placeholder: "example@example.com"  %> <br>
+  <%= f.email_field :email, placeholder: "example@example.com"  %> <br>
 
   <%= f.label "Password"  %>
-  <%= f.text_field :name, placeholder: "Password"  %> <br>
+  <%= f.password_field :password, placeholder: "Password"  %> <br>
 
   <%= f.label "Current City"  %>
-  <%= f.text_field :name, placeholder: "San Francisco"  %> <br>
+  <%= f.text_field :current_city, placeholder: "San Francisco"  %> <br>
 
   <%= f.submit "Become a Vagabond!"%>
 
