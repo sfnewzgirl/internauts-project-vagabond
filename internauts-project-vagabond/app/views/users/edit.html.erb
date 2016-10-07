@@ -1,0 +1,15 @@
+<h1>Edit <%= @user.name%></h1>
+
+<%= form_for @user do |f| %>
+  <%= f.label "Name"  %>
+  <%= f.text_field :name, placeholder: "John Doe"  %> <br>
+
+  <%= f.label "Email"  %>
+  <%= f.email_field :email, placeholder: "example@example.com"  %> <br>
+
+  <%= f.label "Current City"  %>
+  <%= f.text_field :current_city, placeholder: "San Francisco"  %> <br>
+
+  <%= f.submit "Save Edits"%>
+
+<% end %>
