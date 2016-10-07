@@ -5,6 +5,7 @@
 #   git config --global core.excludesfile '~/.gitignore_global'
 
 schema.rb
+/internauts-project-vagabond
 
 # Ignore bundler config.
 /.bundle
