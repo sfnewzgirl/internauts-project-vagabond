@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161006233813) do
+ActiveRecord::Schema.define(version: 20161007011629) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,6 +21,8 @@ ActiveRecord::Schema.define(version: 20161006233813) do
     t.string   "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "user_id"
+    t.index ["user_id"], name: "index_posts_on_user_id", using: :btree
   end
 
   create_table "users", force: :cascade do |t|
@@ -31,16 +33,7 @@ ActiveRecord::Schema.define(version: 20161006233813) do
     t.string   "password_digest"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
-<<<<<<< HEAD
-  end
-  create_table "posts", force: :cascade do |t|
-    t.string   "title"
-    t.string   "author"
-    t.string   "content"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-=======
->>>>>>> 0cefa488de8e786c5ae2d38c31a667b9af0491e4
   end
 
+  add_foreign_key "posts", "users"
 end
