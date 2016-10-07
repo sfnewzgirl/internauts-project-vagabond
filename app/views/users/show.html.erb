@@ -1,5 +1,9 @@
-<h1><%= @user.name%></h1>
+<img src="" alt="">
 <ul>
-  <li><%= @user.email%></li>
-  <li><%= @user.current_city%></li>
+  <h4><%= @user.name%></h4>
+  <h4><%= @user.created_at%></h4>
+  <h4><%= @user.current_city%></h4>
 </ul>
+
+
+<%= link_to "Edit Profile", edit_user_path %>
