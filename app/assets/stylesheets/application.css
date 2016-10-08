@@ -14,12 +14,27 @@
  *= require_self
  */
 
-
-
-h1 {
-  color: red
+* {
+	/*font-family: 'Irish Grover', cursive;*/
+	/*font-family: 'Henny Penny', cursive;*/
+	font-family: 'Short Stack', cursive;
 }
 
+h1 {
+  color: red;
+  font-size: 4em;
+}
+
+header h1 {
+    float:left;
+    margin-top: 1%;
+    margin-left: 3%;
+ }
+header nav {
+    float:right;
+    margin-top: 2%;
+    margin-right: 3%;
+ }
 
 li {
   display: inline-block
@@ -42,4 +57,8 @@ li {
 .glyph {
   display: inline-block;
   flex: 1
+}
+
+.show-photo {
+	width: 100vw;
 }
