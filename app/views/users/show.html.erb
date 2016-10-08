@@ -1,18 +1,26 @@
-<h1><%= @user.name%></h1>
-<ul>
-  <li><%= @user.email%></li>
-  <li><%= @user.current_city%></li>
-</ul>
+<div class="flex-grid">
+  <div class="user">
+    <img src="" alt="">
+    <ul>
+      <h4><%= @user.name%></h4>
+      <h4><%= @user.created_at%></h4>
+      <h4><%= @user.current_city%></h4>
+      <%= link_to image_tag("Pencil.png", border: 0) + "Edit Profile", edit_user_path %>
+    </ul>
+  </div>
 
-<div class="post">
-  <% @user.posts.each do |post| %>
-    <%= post.title %><br>
-    <%= post.author %><br>
-    <%= post.content %>
-    <div class="glyph">
-      <%= image_tag("Pencil.png", border: 0) %>
-      <%= image_tag("Bin.png", border: 0) %>
-    </div>
-    <hr>
-  <% end %>
+  <div class="post">
+      <% @user.posts.each do |post| %>
+        <%= link_to post.title, post_path(post) %><br>
+        <%= post.author %><br>
+        <%= post.content %>
+        <div class="glyph">
+          <%= image_tag("Pencil.png", border: 0) %>
+          <%= image_tag("Bin.png", border: 0) %>
+        </div>
+        <hr>
+      <% end %>
+  </div>
 </div>
+
+

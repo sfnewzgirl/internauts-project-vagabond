@@ -10,6 +10,8 @@
 
   <body>
     <ul>
+
+      <li><%= link_to image_tag("Home.png", border: 0), root_path %></li>
       <% if current_user %>
         <li><%= link_to "User Profile", user_path(current_user) %></li>
         <li><%= link_to "Log Out", logout_path %></li>

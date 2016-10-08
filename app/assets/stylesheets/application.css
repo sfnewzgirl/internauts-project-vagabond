@@ -13,3 +13,33 @@
  *= require_tree .
  *= require_self
  */
+
+
+
+h1 {
+  color: red
+}
+
+
+li {
+  display: inline-block
+}
+
+.flex-grid {
+  display: flex;
+  padding: 30px;
+}
+
+.user {
+  flex: 4
+}
+
+.post {
+  display: inline-block;
+  flex: 6;
+}
+
+.glyph {
+  display: inline-block;
+  flex: 1
+}
