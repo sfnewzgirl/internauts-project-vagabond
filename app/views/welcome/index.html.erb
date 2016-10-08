@@ -1,1 +1,56 @@
-<h1>Splash Page!</h1>
+<!--To Do: Add instructions to click on markers on the map -->
+
+<div id='map-tooltips' class='map'> </div>
+<script>
+L.mapbox.accessToken = 'pk.eyJ1Ijoic2VyYWJha3BhayIsImEiOiJjaXR6ZXd6dXkwZG44Mm9xZXlqM2R6ZHRlIn0.H0yIaibh8nVisjcZ4FkAfQ';
+var mapTooltips = L.mapbox.map('map-tooltips', 'serabakpak.1ji4ip2i')
+  .setView([36, -5], 2);
+var myLayer = L.mapbox.featureLayer().addTo(mapTooltips);
+
+var geojson = [
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-5.3536, 36.1408]
+    },
+    properties: {
+      title: 'Gibraltar',
+      description: '<a href="http://localhost:3000/cities/3">Click me to see travel tips!</a>',
+      'marker-color': '#3ca0d3',
+      'marker-size': 'large',
+      'marker-symbol': 'rocket'
+    }
+  },
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-122.413682, 37.775408]
+    },
+    properties: {
+      title: 'San Francisco',
+      description: '<a href="http://localhost:3000/cities/1">Click me to see travel tips!</a>',
+      'marker-color': '#63b6e5',
+      'marker-size': 'large',
+      'marker-symbol': 'rocket'
+    }
+  },
+   {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-0.12780000000000769, 51.5074]
+    },
+    properties: {
+      title: 'London',
+      description: '<a href="http://localhost:3000/cities/2">Click me to see travel tips!</a>',
+      'marker-color': '#63b6e5',
+      'marker-size': 'large',
+      'marker-symbol': 'rocket'
+    }
+  }
+];
+myLayer.setGeoJSON(geojson);
+mapTooltips.scrollWheelZoom.disable();
+</script>
