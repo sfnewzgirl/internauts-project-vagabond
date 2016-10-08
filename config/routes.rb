@@ -12,7 +12,12 @@ Rails.application.routes.draw do
   post '/sessions', to: 'sessions#create'
   get '/logout', to: 'sessions#destroy'
 
-  get '/posts/:post_id', to: 'posts#show', as: 'post'
+  # misha tried this but it didn't work either
+  # resources :cities do
+  # resources :posts
+  # end
+
+  get 'posts/:post_id', to: 'posts#show', as: 'post'
   get '/cities/:city_id/posts/new', to: 'posts#new', as: 'new_post'
   post '/cities/:city_id/posts', to: 'posts#create'
 

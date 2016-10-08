@@ -11,7 +11,7 @@ class PostsController < ApplicationController
     new_post = Post.new
     if new_post.save
       city.posts << new_post
-      redirect_to post_path
+      redirect_to city_path
     else
       redirect_to root_path
     end

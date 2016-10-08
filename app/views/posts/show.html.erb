@@ -2,15 +2,15 @@
   <div class="user">
     <img src="" alt="">
     <ul>
-      <h4><%= @post.user.name %></h4>
-      <h4><%= @post.user.created_at %></h4>
-      <h4><%= @post.user.current_city %></h4>
+      <h4><%= @city @post.user.name %></h4>
+      <h4><%= @city @post.user.created_at %></h4>
+      <h4><%= @city @post.user.current_city %></h4>
     </ul>
   </div>
 
   <div class="post">
-    <%= @post.title %><br>
+    <%= @city @post.title %><br>
     <%= link_to @post.author, user_path(@post.user_id) %><br>
-    <%= @post.content %>
+    <%= @city @post.content %>
   </div>
 </div>
