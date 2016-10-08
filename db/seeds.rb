@@ -45,8 +45,8 @@ City.create({
 	})
 
 City.create({
-	name: 'Gibralter',
-	photo: 'gibralter.jpeg'
+	name: 'Gibraltar',
+	photo: 'gibraltar.jpeg'
 	})
 
 x = 1
