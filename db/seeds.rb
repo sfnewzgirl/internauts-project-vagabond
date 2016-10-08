@@ -10,7 +10,36 @@
 
 Post.destroy_all
 
+3.times do
+User.create({
+	name: FFaker::Name.name,
+	current_city: 'SF',
+	join_date: nil,
+	email: FFaker::Internet.email,
+	password: '1234'
+	})
+end
+
 
 3.times do
-Post.create({title: "Some Title", author: FFaker::Name.name, content: FFaker::HipsterIpsum.paragraph})
+Post.create({title: "Some Title",
+  author: FFaker::Name.name,
+  content: FFaker::HipsterIpsum.paragraph,
+  user_id: 1})
 end
+
+
+City.create({
+	name: 'San Francisco',
+	photo: 'default.jpeg'
+	})
+
+City.create({
+	name: 'London',
+	photo: 'default.jpeg'
+	})
+
+City.create({
+	name: 'Gibralter',
+	photo: 'default.jpeg'
+	})
