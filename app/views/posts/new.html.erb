@@ -1,0 +1,16 @@
+<h1>Create a New Post!</h1>
+
+<%= form_for @post, url: '/cities/:id/posts', method: 'post' do |f| %>
+
+  <%= f.label "Title"  %>
+  <%= f.text_field :title, placeholder: "Give Your Travel Tip a Title" %> <br>
+
+  <%= f.label "Author"  %>
+  <%= f.text_field :author, placeholder: "Your Name"  %> <br>
+
+  <%= f.label "Your Tip"  %>
+  <%= f.text_area :content, placeholder: "Tell Us About Your Travel Tip"  %> <br>
+
+  <%= f.submit "Save"%>
+
+<% end %>
