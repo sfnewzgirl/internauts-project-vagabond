@@ -1,6 +1,6 @@
 <h1>Edit <%= @user.name%></h1>
 
-<%= form_for @user do |f| %>
+<%= form_for @user, html: { multipart: true } do |f| %>
   <%= f.label "Name"  %>
   <%= f.text_field :name, placeholder: "John Doe"  %> <br>
 
@@ -9,6 +9,9 @@
 
   <%= f.label "Current City"  %>
   <%= f.text_field :current_city, placeholder: "San Francisco"  %> <br>
+
+  <%= f.label :avatar %>
+  <%= f.file_field :avatar %> <br>
 
   <%= f.submit "Save Edits"%>
 

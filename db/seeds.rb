@@ -89,7 +89,7 @@ a = 1
 3.times do	
 	Post.create({
 		title: 'Some Title' + a.to_s,
-	  	author: 'Mikey Rogachevsky',
+	  	author: 'Sera Bak',
 	  	content: FFaker::HipsterIpsum.paragraph,
 	  	user_id: 4,
 	  	city_id: a
