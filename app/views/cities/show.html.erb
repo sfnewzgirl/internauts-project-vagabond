@@ -5,3 +5,5 @@
 <% @city.posts.each do |post| %>
 	<%= link_to post.title, post_path(post.id) %>
 <% end %>
+
+<%= link_to image_tag("Pencil.png", border: 0) + "Make a Post", new_post_path %>
