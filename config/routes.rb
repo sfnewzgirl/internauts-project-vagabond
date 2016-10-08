@@ -19,8 +19,6 @@ Rails.application.routes.draw do
   patch '/posts/:id', to: 'posts#update'
   delete '/posts/:id', to: 'posts#destroy'
 
-  get '/cities/:id', to: 'cities#show' as: 'city'
-
   get '/cities/:id', to: 'cities#show', as: 'city'
 
 end
