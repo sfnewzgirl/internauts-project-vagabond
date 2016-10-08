@@ -43,3 +43,7 @@ li {
   display: inline-block;
   flex: 1
 }
+
+.show-photo {
+	width: 100vw;
+}

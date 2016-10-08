@@ -1,7 +1,6 @@
 <h1><%= @city.name %></h1>
 
-<%= image_tag @city.photo %><br>
-
+<%= image_tag @city.photo, class: 'show-photo' %><br>
 
 <% @city.posts.each do |post| %>
 	<%= link_to post.title, post_path(post.id) %>
