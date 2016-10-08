@@ -4,22 +4,39 @@
     <title>VagabondApp</title>
     <%= csrf_meta_tags %>
 
+    <link href="https://fonts.googleapis.com/css?family=Henny+Penny|Irish+Grover|Short+Stack" rel="stylesheet">
+
+    <script src='https://api.mapbox.com/mapbox.js/v2.4.0/mapbox.js'></script>
+    <link href='https://api.mapbox.com/mapbox.js/v2.4.0/mapbox.css' rel='stylesheet' />
+    
+    <style>
+      body { margin:0; padding:0; }
+      .map { position:absolute; top:20%; bottom:0; width:100%; }
+    </style>
+
+
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <ul>
+    <header>
+      <!-- <h1>Vagabond</h1> --> 
+      <!-- Zach or Mikey: I commented this out for now because it messes up the layout of the profile show view and the city show view. -->
+      <nav>
+        <ul>
+          <li><%= link_to image_tag("Home.png", border: 0), root_path %></li>
+            <% if current_user %>
+              <li><%= link_to "User Profile", user_path(current_user) %></li>
+              <li><%= link_to "Log Out", logout_path %></li>
+            <% else %>
+              <li><%= link_to "Create User", new_user_path %></li>
+              <li><%= link_to "Log In", login_path %></li>
+            <% end %>
+        </ul>
+      </nav>
+    </header>
 
-      <li><%= link_to image_tag("Home.png", border: 0), root_path %></li>
-      <% if current_user %>
-        <li><%= link_to "User Profile", user_path(current_user) %></li>
-        <li><%= link_to "Log Out", logout_path %></li>
-      <% else %>
-        <li><%= link_to "Create User", new_user_path %></li>
-        <li><%= link_to "Log In", login_path %></li>
-      <% end %>
-    </ul>
     <%= yield %>
   </body>
 </html>
