@@ -16,8 +16,9 @@
 
   <% end %>
 
-    <div class="button back_btn">
-      <%= link_to "Back", user_path %>
-    </div>
+
+      <%= link_to user_path, class: "rm_line" do %>
+        <div class="button back_btn">Back</div>
+      <% end %>
   </div>
 </div>

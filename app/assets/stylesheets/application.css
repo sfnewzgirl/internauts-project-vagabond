@@ -82,6 +82,12 @@ header{
 	max-width: 40px;
 }
 
+.edit_prof_btn {
+  margin-top: 8px;
+  max-width: 150px;
+  max-height: 40px;
+}
+
 
 .flex-grid {
   display: flex;
