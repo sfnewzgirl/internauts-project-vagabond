@@ -8,16 +8,46 @@ class PostsController < ApplicationController
     city_id = params[:city_id]
     @city = City.find_by(id: city_id)
   end
+  # def create
+  #   city = City.find_by_id(params[:city_id])
+  #   debugger
+  #   new_post = Post.new(post_params)
+  #   if new_post.save
+  #     city.posts << new_post
+  #     redirect_to post_path
+  #   else
+  #     redirect_to root_path
+  #   end
+  # end
+
+  #mimics pet app
+  # def create
+  #   city = City.find(params[:city_id])
+  #   new_post = Post.new(post_params)
+  #   if new_post.save
+  #     city.pets << new_post
+  #     redirect_to new_post_path
+  #   else
+  #     redirect_to root_path
+  #   end
+  # end
+
   def create
-    city = City.find_by_id(params[:city_id])
-    new_post = Post.new(post_params)
-    if new_post.save
-      city.posts << new_post
-      redirect_to post_path
+    @city = City.find(params[:city_id])
+    @post = @city.posts.build(params[:post])
+
+    # This is unnecessary as you're already adding
+    # the post to the topic with the build statement.
+    # @post.topic  = @topic
+
+    if @post.save
+        flash[:success] = "Konu oluşturuldu!"
+        redirect_to post_path
     else
-      redirect_to root_path
+        redirect_to root_path
     end
   end
+
 
   #
   # def create
