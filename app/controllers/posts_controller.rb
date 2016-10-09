@@ -20,15 +20,15 @@ class PostsController < ApplicationController
 
 
   def create
-    city = City.find_by_id(params[:city_id])
+    city = City.find_by_id(params[:id])
+    debugger
     new_post = Post.new(post_params)
     if new_post.save
-      puts "GOING TO NEW"
       city.posts << new_post
       flash [:notice]
       redirect_to city_path
     else
-      redirect_to root_path
+      redirect_to post_path
     end
   end
 
@@ -38,9 +38,6 @@ class PostsController < ApplicationController
   # end
 
   private
-  def city_id
-    city_id = params[:city_id]
-  end
   def post_params
     params.require(:post).permit(:title, :author, :content)
   end
