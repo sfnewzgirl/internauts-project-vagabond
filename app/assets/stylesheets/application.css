@@ -25,7 +25,10 @@ h1 {
   font-size: 3em;
   margin: 0
 }
-
+header {
+	display: flex;
+	justify-content: space-between;
+}
 header h1 {
     float:left;
     margin-top: 1%;
@@ -91,4 +94,9 @@ header nav {
 
 .show-photo {
 	width: 100vw;
+}
+
+#map-tooltips {
+	margin-top: 15px;
+	border-top: 5px solid black
 }
