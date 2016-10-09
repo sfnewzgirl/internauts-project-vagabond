@@ -1,18 +1,22 @@
 <h2>Welcome to the Global Community!</h2>
 
-<%= form_for @user do |f| %>
-  <%= f.label "Name"  %>
-  <%= f.text_field :name, placeholder: "John Doe"  %> <br>
+<div class="form_container">
+  <div class="form">
+    <%= form_for @user do |f| %>
+      <%= f.label "Name"  %>
+      <%= f.text_field :name, placeholder: "John Doe"  %> <br>
 
-  <%= f.label "Email"  %>
-  <%= f.email_field :email, placeholder: "example@example.com"  %> <br>
+      <%= f.label "Email"  %>
+      <%= f.email_field :email, placeholder: "example@example.com"  %> <br>
 
-  <%= f.label "Password"  %>
-  <%= f.password_field :password, placeholder: "Password"  %> <br>
+      <%= f.label "Password"  %>
+      <%= f.password_field :password, placeholder: "Password"  %> <br>
 
-  <%= f.label "Current City"  %>
-  <%= f.text_field :current_city, placeholder: "San Francisco"  %> <br>
+      <%= f.label "Current City"  %>
+      <%= f.text_field :current_city, placeholder: "San Francisco"  %> <br>
 
-  <%= f.submit "Become a Vagabond!"%>
+      <%= f.submit "Become a Vagabond!"%>
 
-<% end %>
+    <% end %>
+  </div>
+</div>

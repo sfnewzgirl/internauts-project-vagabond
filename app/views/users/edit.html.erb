@@ -1,19 +1,23 @@
-<h1>Edit <%= @user.name%></h1>
-<div class="form">
+<h2>Edit <%= @user.name%></h2>
+<div class="form_container">
+  <div class="form">
 
-<%= form_for @user do |f| %>
-  <%= f.label "Name"  %>
-  <%= f.text_field :name, placeholder: "John Doe"  %> <br>
+  <%= form_for @user do |f| %>
+    <%= f.label "Name"  %>
+    <%= f.text_field :name, placeholder: "John Doe"  %> <br>
 
-  <%= f.label "Email"  %>
-  <%= f.email_field :email, placeholder: "example@example.com"  %> <br>
+    <%= f.label "Email"  %>
+    <%= f.email_field :email, placeholder: "example@example.com"  %> <br>
 
-  <%= f.label "Current City"  %>
-  <%= f.text_field :current_city, placeholder: "San Francisco"  %> <br>
+    <%= f.label "Current City"  %>
+    <%= f.text_field :current_city, placeholder: "San Francisco"  %> <br>
 
-  <%= f.submit "Save Edits"%>
+    <%= f.submit "Save Edits"%>
 
-<% end %>
+  <% end %>
 
-<%= link_to "Back", user_path %>
+    <div class="button back_btn">
+      <%= link_to "Back", user_path %>
+    </div>
+  </div>
 </div>

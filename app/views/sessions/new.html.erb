@@ -1,15 +1,18 @@
 <h2>Welcome Back!</h2>
 
+<div class="form_container">
+  <div class="form">
+    <%= form_for @user, url: '/sessions', method: 'post' do |f| %>
 
-<%= form_for @user, url: '/sessions', method: 'post' do |f| %>
+      <%= f.label "Email"  %>
+      <%= f.email_field :email, placeholder: "example@example.com"  %> <br>
 
-  <%= f.label "Email"  %>
-  <%= f.email_field :email, placeholder: "example@example.com"  %> <br>
-
-  <%= f.label "Password"  %>
-  <%= f.password_field :password, placeholder: "Password"  %> <br>
+      <%= f.label "Password"  %>
+      <%= f.password_field :password, placeholder: "Password"  %> <br>
 
 
-  <%= f.submit "Log in"%>
+      <%= f.submit "Log in"%>
 
-<% end %>
+    <% end %>
+  </div>
+</div>
