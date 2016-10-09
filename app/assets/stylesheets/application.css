@@ -79,15 +79,11 @@ header{
 .back_btn {
 	margin-top: 8px;
 	margin-left: 48%;
-	max-width: 40px;
+	width: 40px;
 }
-
-.edit_prof_btn {
-  margin-top: 8px;
-  max-width: 150px;
-  max-height: 40px;
+.edit_profile {
+	width: 125px;
 }
-
 
 .flex-grid {
   display: flex;
