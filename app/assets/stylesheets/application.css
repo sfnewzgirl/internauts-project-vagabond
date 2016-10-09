@@ -37,7 +37,7 @@ header nav {
  }
 
 li {
-  display: inline-block
+
 }
 
 .flex-grid {
@@ -50,7 +50,6 @@ li {
 }
 
 .post {
-  display: inline-block;
   flex: 6;
 }
 
