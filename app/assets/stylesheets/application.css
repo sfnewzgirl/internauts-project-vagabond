@@ -22,7 +22,7 @@
 
 h1 {
   color: red;
-  font-size: 4em;
+  font-size: 3em;
 }
 
 header h1 {
@@ -34,10 +34,40 @@ header nav {
     float:right;
     margin-top: 2%;
     margin-right: 3%;
+    width: 300px;
  }
 
-li {
+.button {
+  display: inline-block;
+  padding: 9px;
+  border-radius: 5%;
+  border: 1px solid black;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
 
+.user_nav {
+  text-align: center;
+  background-color: #ff3e3e;
+  height: 100%;
+  width: 40%;
+}
+
+.user_nav:active {
+  background-color: #ff3e3e;
+  box-shadow: 0 4px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  transform: translateY(4px);
+}
+
+.log_nav {
+  background-color: #ffa429;
+  height: 100%;
+  width: 20%;
+}
+
+.log_nav:active {
+  background-color: #ffa429;
+  box-shadow: 0 4px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  transform: translateY(4px);
 }
 
 .flex-grid {
@@ -46,7 +76,7 @@ li {
 }
 
 .user {
-  flex: 4
+  flex: 4;
 }
 
 .post {
@@ -55,7 +85,7 @@ li {
 
 .glyph {
   display: inline-block;
-  flex: 1
+  flex: 1;
 }
 
 .show-photo {

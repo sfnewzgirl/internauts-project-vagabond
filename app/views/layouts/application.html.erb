@@ -24,16 +24,26 @@
       <!-- <h1>Vagabond</h1> -->
       <!-- Zach or Mikey: I commented this out for now because it messes up the layout of the profile show view and the city show view. -->
       <nav>
-        <ul>
           <%= link_to image_tag("Home.png", border: 0), root_path %>
             <% if current_user %>
-              <%= link_to "User Profile", user_path(current_user) %>
-              <%= link_to "Log Out", logout_path %>
+
+              <%= link_to user_path(current_user) do %>
+                <div class="button user_nav">User Profile</div>
+              <% end %>
+
+              <%= link_to logout_path do %>
+                <div class="button log_nav">Log Out</div>
+              <% end %>
             <% else %>
-              <%= link_to "Create User", new_user_path %>
-              <%= link_to "Log In", login_path %>
+
+              <%= link_to new_user_path do %>
+              <div class="button user_nav">Create User</div>
+              <% end %>
+
+              <%= link_to login_path do %>
+              <div class="button log_nav">Log In</div>
+              <% end %>
             <% end %>
-        </ul>
       </nav>
     </header>
 
