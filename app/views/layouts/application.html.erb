@@ -31,20 +31,20 @@
           </div>
 
             <% if current_user %>
-              <%= link_to user_path(current_user) do %>
+              <%= link_to user_path(current_user), class: "rm_line" do %>
                 <div class="button user_nav">User Profile</div>
               <% end %>
 
-              <%= link_to logout_path do %>
+              <%= link_to logout_path, class: "rm_line" do %>
                 <div class="button log_nav">Log Out</div>
               <% end %>
             <% else %>
 
-              <%= link_to new_user_path do %>
+              <%= link_to new_user_path, class: "rm_line" do %>
                 <div class="button user_nav">Create User</div>
               <% end %>
 
-              <%= link_to login_path do %>
+              <%= link_to login_path, class: "rm_line" do %>
                 <div class="button log_nav">Log In</div>
               <% end %>
             <% end %>

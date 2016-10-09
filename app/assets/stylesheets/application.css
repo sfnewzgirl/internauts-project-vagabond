@@ -52,6 +52,10 @@ header{
 	 display: flex;
  }
 
+ .rm_line:link {
+  text-decoration: none;
+ }
+
 .button {
 	background: #00ffb0;
   padding: 9px;
