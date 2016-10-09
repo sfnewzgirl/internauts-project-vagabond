@@ -19,11 +19,17 @@
 	/*font-family: 'Henny Penny', cursive;*/
 	font-family: 'Short Stack', cursive;
 }
-
-h1 {
+body{
+	background: #ffe629
+}
+h1  {
   color: #1d009b;
   font-size: 3em;
   margin: 0
+}
+h2 {
+	color:#1d009b;
+	text-align:center;
 }
 header {
 	display: flex;
