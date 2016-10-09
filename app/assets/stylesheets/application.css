@@ -25,60 +25,47 @@ body{
 h1  {
   color: #1d009b;
   font-size: 3em;
-  margin: 0
+  margin: 0;
+	clear:both;
 }
 h2 {
 	color:#1d009b;
 	text-align:center;
+	clear:both;
 }
-header {
-	display: flex;
-	justify-content: space-between;
-}
+
 header h1 {
     float:left;
     margin-top: 1%;
     margin-left: 3%;
  }
 header nav {
+		display: flex;
     float:right;
     margin-top: 2%;
     margin-right: 3%;
-    width: 300px;
  }
 
 .button {
-  display: inline-block;
+	background: #00ffb0;
   padding: 9px;
   border-radius: 5%;
   border: 1px solid black;
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+	text-align: center;
+	height: 20px;
 }
-
-.user_nav {
-  text-align: center;
-  background-color: #ff3e3e;
-  height: 100%;
-  width: 40%;
-}
-
-.user_nav:active {
-  background-color: #ff3e3e;
-  box-shadow: 0 4px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+.button:active {
+	box-shadow: 0 4px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
   transform: translateY(4px);
 }
-
+.user_nav {
+  background-color: #ff3e3e;
+}
 .log_nav {
   background-color: #ffa429;
-  height: 100%;
-  width: 25%;
 }
 
-.log_nav:active {
-  background-color: #ffa429;
-  box-shadow: 0 4px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-  transform: translateY(4px);
-}
 
 .flex-grid {
   display: flex;
