@@ -28,22 +28,28 @@ h1  {
   margin: 0;
 	clear:both;
 }
-h2 {
+h2{
 	color:#1d009b;
 	text-align:center;
 	clear:both;
 }
-
+p {
+	color:#1d009b;
+}
 header h1 {
     float:left;
     margin-top: 1%;
     margin-left: 3%;
  }
-header nav {
+header{
 		display: flex;
-    float:right;
     margin-top: 2%;
     margin-right: 3%;
+		justify-content: space-around;
+		align-items: baseline;
+ }
+ nav {
+	 display: flex;
  }
 
 .button {
@@ -54,6 +60,7 @@ header nav {
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 	text-align: center;
 	height: 20px;
+	margin-left: 8px;
 }
 .button:active {
 	box-shadow: 0 4px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
