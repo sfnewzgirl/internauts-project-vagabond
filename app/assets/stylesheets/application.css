@@ -44,6 +44,12 @@ nav {
  	text-align:center;
  	clear:both;
  }
+
+ h3{
+  color:#1d009b;
+  text-align:center;
+  clear:both;
+ }
   #quote {
  	color:#1d009b;
  }
@@ -90,6 +96,7 @@ nav {
 
 .post {
   flex: 6;
+  font-size: 1.5em;
 }
 
 .glyph {
