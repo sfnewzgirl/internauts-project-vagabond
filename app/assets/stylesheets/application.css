@@ -29,10 +29,7 @@ header {
 	 align-items: baseline;
 	 justify-content: space-around;
 }
-nav {
-	float: right;
-	display: flex;
-}
+
  #title  {
 	 margin-left: 15px;
 	 margin-right: 10px;
@@ -80,19 +77,6 @@ nav {
 .save_changes {
 	background-color: #ffa429;
 	color: black;
-}
-
-.flex-grid {
-  display: flex;
-  padding: 30px;
-}
-
-.user {
-  flex: 4;
-}
-
-.post {
-  flex: 6;
 }
 
 .glyph {
