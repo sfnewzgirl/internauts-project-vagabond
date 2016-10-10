@@ -8,31 +8,37 @@ users = User.create([
 	current_city: 'San Francisco',
 	join_date: nil,
 	email: 'misha@ga.com',
-	password: '1234'
+	password: '1234',
+	avatar: File.open(File.join(Rails.root, 'db', 'fixtures', 'smiley-avatar.gif'))
 	},
 	{
 	name: 'Zach Fong',
 	current_city: 'San Francisco',
 	join_date: nil,
 	email: 'zach@ga.com',
-	password: '1234'
+	password: '1234',
+	avatar: File.open(File.join(Rails.root, 'db', 'fixtures', 'smiley-avatar.gif'))
 	},
 	{
 	name: 'Mikey Rogachevsky',
 	current_city: 'San Francisco',
 	join_date: nil,
 	email: 'mikey@ga.com',
-	password: '1234'
+	password: '1234',
+	avatar: File.open(File.join(Rails.root, 'db', 'fixtures', 'smiley-avatar.gif'))
 	},
 	{
 	name: 'Sera Bak',
 	current_city: 'San Francisco',
 	join_date: nil,
 	email: 'sera@ga.com',
-	password: '1234'
+	password: '1234',
+	avatar: File.open(File.join(Rails.root, 'db', 'fixtures', 'smiley-avatar.gif'))
 	}
 
 ])
+
+
 
 City.create({
 	name: 'San Francisco',
@@ -89,7 +95,7 @@ a = 1
 3.times do	
 	Post.create({
 		title: 'Some Title' + a.to_s,
-	  	author: 'Mikey Rogachevsky',
+	  	author: 'Sera Bak',
 	  	content: FFaker::HipsterIpsum.paragraph,
 	  	user_id: 4,
 	  	city_id: a

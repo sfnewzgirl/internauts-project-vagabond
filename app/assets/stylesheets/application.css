@@ -115,6 +115,7 @@ header{
 	width: 100vw;
 }
 
+<<<<<<< HEAD
 #map-tooltips {
 	margin-top: 15px;
 	border-top: 5px solid black
@@ -130,5 +131,8 @@ header{
 .form {
 	padding: 5px;
 	text-align: center;
+}
 
+.profile-image {
+  width: 150px;
 }

@@ -30,7 +30,7 @@ gem "ffaker"
 gem "autoprefixer-rails"
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
-
+gem "paperclip", git: "git://github.com/thoughtbot/paperclip.git"
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
