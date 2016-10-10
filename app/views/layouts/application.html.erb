@@ -20,12 +20,12 @@
   </head>
 
   <body>
-    <header>
-      <h1>Vagabond</h1>
-      <p>
+    <header class="row">
+      <h1 id="title" class="three columns">Vagabond</h1>
+      <p id="quote" class="five columns">
         "Not all who wander are lost" - J.R.R. Tolkein
       </p>
-      <nav>
+      <nav id="nav" class="three columns">
           <div class="button">
             <%= link_to image_tag("Home.png", border: 0), root_path %>
           </div>
@@ -41,7 +41,7 @@
             <% else %>
 
               <%= link_to new_user_path, class: "rm_line" do %>
-                <div class="button user_nav">Create User</div>
+                <div class="button user_nav">Join</div>
               <% end %>
 
               <%= link_to login_path, class: "rm_line" do %>
