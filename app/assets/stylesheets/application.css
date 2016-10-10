@@ -77,7 +77,10 @@ nav {
 	margin-top: 8px;
 	margin-left: 48%;
 }
-
+.save_changes {
+	background-color: #ffa429;
+	color: black;
+}
 
 .flex-grid {
   display: flex;
@@ -107,6 +110,8 @@ nav {
 	border-radius: 12px;
 }
 .form {
+	display: flex;
+	justify-content: center;
 	padding: 5px;
 	text-align: justify;
 }
