@@ -1,6 +1,6 @@
 <h1>Edit Your Post!</h1>
 
-<%= form_for [@city, @post], url: "/cities/" + @city.id.to_s + "/posts/:post_id", method: 'patch' do |f| %>
+<%= form_for [@city, @post], url: "/cities/" + @city.id.to_s + "/posts/" +@post.id.to_s, method: 'patch' do |f| %>
 
   <%= f.label "Title"  %>
   <%= f.text_field :title, placeholder: "Give Your Travel Tip a Title" %> <br>
