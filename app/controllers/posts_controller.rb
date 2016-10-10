@@ -12,7 +12,8 @@ class PostsController < ApplicationController
 
   def create
      @post = Post.create(post_params)
-     @post.user = current_user
+    #  @post.user = current_user
+    #  post = post_params.merge({author: current_user.name})
      redirect_to city_path
 
 # author: current_user.name,
@@ -38,6 +39,6 @@ class PostsController < ApplicationController
   private
   def post_params
     post_info = params.require(:post).permit(:title, :content)
-    post_params = post_info.merge({city_id: params[:city_id], user_id: current_user.id})
+    post_params = post_info.merge({city_id: params[:city_id], user_id: current_user.id, author: current_user.name})
   end
 end
