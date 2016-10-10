@@ -1,6 +1,6 @@
-<h1>Create a New Post!</h1>
+<h1>Edit Your Post!</h1>
 
-<%= form_for [@city, @post], url: "/cities/" + @city.id.to_s + "/posts", method: 'post' do |f| %>
+<%= form_for [@city, @post], url: "/cities/" + @city.id.to_s + "/posts/:post_id", method: 'patch' do |f| %>
 
   <%= f.label "Title"  %>
   <%= f.text_field :title, placeholder: "Give Your Travel Tip a Title" %> <br>
@@ -8,7 +8,7 @@
   <%= f.label "Your Tip"  %>
   <%= f.text_area :content, placeholder: "Tell Us About Your Travel Tip"  %> <br>
 
-  <%= f.submit "Save" %>
+  <%= f.submit "Update" %>
 
 <% end %>
 <br>
