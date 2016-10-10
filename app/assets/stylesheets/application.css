@@ -30,6 +30,7 @@ header {
 	 justify-content: space-around;
 }
 
+
  #title  {
 	 margin-left: 15px;
 	 margin-right: 10px;
@@ -40,6 +41,12 @@ header {
  	color:#1d009b;
  	text-align:center;
  	clear:both;
+ }
+
+ h3{
+  color:#1d009b;
+  text-align:center;
+  clear:both;
  }
   #quote {
  	color:#1d009b;
@@ -77,6 +84,41 @@ header {
 .save_changes {
 	background-color: #ffa429;
 	color: black;
+}
+
+.flex-grid {
+  display: flex;
+  padding: 30px;
+}
+
+.row {
+  margin-top: 50px;
+}
+
+.user {
+  flex: 4;
+}
+
+.city_post {
+  line-height: 50px;
+}
+
+.post {
+  margin-top: -32px;
+  flex: 6;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.post_button {
+  position: relative;
+}
+
+.make_post{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .glyph {
