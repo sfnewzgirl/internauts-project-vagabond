@@ -26,28 +26,28 @@
         "Not all who wander are lost" - J.R.R. Tolkein
       </p>
       <nav>
-          <div class="button">
-            <%= link_to image_tag("Home.png", border: 0), root_path %>
-          </div>
+        <%= link_to root_path do %>
+          <div class="button"><%= image_tag("Home.png", border: 0) %></div>
+        <% end %>
 
-            <% if current_user %>
-              <%= link_to user_path(current_user), class: "rm_line" do %>
-                <div class="button user_nav">User Profile</div>
-              <% end %>
+        <% if current_user %>
+          <%= link_to user_path(current_user), class: "rm_line" do %>
+            <div class="button user_nav">User Profile</div>
+          <% end %>
 
-              <%= link_to logout_path, class: "rm_line" do %>
-                <div class="button log_nav">Log Out</div>
-              <% end %>
-            <% else %>
+          <%= link_to logout_path, class: "rm_line" do %>
+            <div class="button log_nav">Log Out</div>
+          <% end %>
 
-              <%= link_to new_user_path, class: "rm_line" do %>
-                <div class="button user_nav">Create User</div>
-              <% end %>
+        <% else %>
+          <%= link_to new_user_path, class: "rm_line" do %>
+            <div class="button user_nav">Create User</div>
+          <% end %>
 
-              <%= link_to login_path, class: "rm_line" do %>
-                <div class="button log_nav">Log In</div>
-              <% end %>
-            <% end %>
+          <%= link_to login_path, class: "rm_line" do %>
+            <div class="button log_nav">Log In</div>
+          <% end %>
+        <% end %>
       </nav>
     </header>
 
