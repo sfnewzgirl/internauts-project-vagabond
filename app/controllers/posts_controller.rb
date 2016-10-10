@@ -2,6 +2,9 @@ class PostsController < ApplicationController
   def show
     @post = Post.find_by_id(params[:post_id])
     @city = City.find_by(id: @post.city_id)
+
+    @user = User.find_by(id: @post.user_id)
+
   end
 
   def new
@@ -12,27 +15,29 @@ class PostsController < ApplicationController
 
   def create
      @post = Post.create(post_params)
+     @post.user = current_user
      redirect_to city_path
   end
 
-  # def create
-  #   user = session[:user_ id]
-  #   city = City.find(params[:city_id])
-  #   puts "got a city"
-  #   new_post = Post.new(post_params)
-  #   puts "new_post.title = " + new_post.title
-  #   if new_post.save
-  #     city.posts << new_post
-  #     user.posts << new_post
-  #     redirect_to city_path
-  #   else
-  #     redirect_to root_path
-  #   end
-  # end
+  def edit
+    post_id = params[:id]
+    @post = Post.find_by(id: post_id)
+    city_id = params[:city_id]
+    @city = City.find_by(id: city_id)
+  end
+
+  def update
+    post_id = params[:id]
+    post = Post.find_by(id: post_id)
+    city_id = params[:city_id]
+    city = City.find_by(id: city_id)
+    post.update_attributes(post_params)
+    redirect_to city_path
+  end
 
   private
   def post_params
-    post_info = params.require(:post).permit(:title, :author, :content)
-    post_params = post_info.merge({city_id: params[:city_id], user_id: current_user.id})
+    post_info = params.require(:post).permit(:title, :content)
+    post_params = post_info.merge({author: current_user.name, city_id: params[:city_id], user_id: current_user.id})
   end
 end
