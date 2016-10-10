@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
   def show
     @post = Post.find_by_id(params[:post_id])
+    @city = City.find_by(id: @post.city_id)
   end
 
   def new
@@ -8,68 +9,30 @@ class PostsController < ApplicationController
     city_id = params[:city_id]
     @city = City.find_by(id: city_id)
   end
-  # def create
-  #   city = City.find_by_id(params[:city_id])
-  #   debugger
-  #   new_post = Post.new(post_params)
-  #   if new_post.save
-  #     city.posts << new_post
-  #     redirect_to post_path
-  #   else
-  #     redirect_to root_path
-  #   end
-  # end
-
-  #mimics pet app
-  # def create
-  #   city = City.find(params[:city_id])
-  #   new_post = Post.new(post_params)
-  #   if new_post.save
-  #     city.pets << new_post
-  #     redirect_to new_post_path
-  #   else
-  #     redirect_to root_path
-  #   end
-  # end
 
   def create
-    @city = City.find(params[:city_id])
-    @post = @city.posts.build(params[:post])
-
-    # This is unnecessary as you're already adding
-    # the post to the topic with the build statement.
-    # @post.topic  = @topic
-
-    if @post.save
-        flash[:success] = "Konu oluşturuldu!"
-        redirect_to post_path
-    else
-        redirect_to root_path
-    end
+     @post = Post.create(post_params)
+     redirect_to city_path
   end
 
-
-  #
   # def create
-  #   city_id = params[:city_id]
-  #   @city = City.find_by(id: city_id)
-  #   # @city = City.find_by_id(params[:city_id])
+  #   user = session[:user_ id]
+  #   city = City.find(params[:city_id])
+  #   puts "got a city"
   #   new_post = Post.new(post_params)
+  #   puts "new_post.title = " + new_post.title
   #   if new_post.save
-  #     @city.posts << new_post
+  #     city.posts << new_post
+  #     user.posts << new_post
   #     redirect_to city_path
   #   else
-  #     redirect_to post_path
+  #     redirect_to root_path
   #   end
-  # end
-
-    #save user_id
-    #save city_id
-    #need to turn author into logged in user
   # end
 
   private
   def post_params
-    params.require(:post).permit(:title, :author, :content, :city_id)
+    post_info = params.require(:post).permit(:title, :author, :content)
+    post_params = post_info.merge({city_id: params[:city_id], user_id: current_user.id})
   end
 end
