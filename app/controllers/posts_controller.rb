@@ -23,6 +23,15 @@ class PostsController < ApplicationController
     @city = City.find_by(id: city_id)
   end
 
+  def update
+    post_id = params[:id]
+    post = Post.find_by(id: post_id)
+    city_id = params[:city_id]
+    city = City.find_by(id: city_id)
+    post.update_attributes(post_params)
+    redirect_to city_path
+  end
+
   private
   def post_params
     post_info = params.require(:post).permit(:title, :content)
