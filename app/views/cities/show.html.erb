@@ -8,7 +8,7 @@
 
         <% city = @city.posts.sort_by {|post| post.created_at} %>
         <% city.reverse.each do |post| %>
-          <p><%= link_to post.title, post_path(post.id) %></p>
+          <div class="city_post"><%= link_to post.title, post_path(post.id) %></div>
         <% end %><br>
 
     </div>

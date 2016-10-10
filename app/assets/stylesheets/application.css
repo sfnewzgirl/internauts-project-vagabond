@@ -102,6 +102,10 @@ nav {
   flex: 4;
 }
 
+.city_post {
+  line-height: 50px;
+}
+
 .post {
   margin-top: -32px;
   flex: 6;
