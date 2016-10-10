@@ -1,10 +1,10 @@
 <div class="flex-grid">
   <div class="user">
-    <img src="" alt="">
+    <%= image_tag @user.avatar.url(:thumb), class: 'profile-image' %>
     <ul>
-      <h4><%= @post.user.name %></h4>
-      <h4><%= @post.user.created_at %></h4>
-      <h4><%= @post.user.current_city %></h4>
+      <h4><%= link_to @post.author, user_path(@post.user_id) %></h4>
+      <h4><%= @post.created_at %></h4>
+      <h4><%= @city.name %></h4>
     </ul>
   </div>
 
