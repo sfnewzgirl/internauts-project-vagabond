@@ -2,7 +2,9 @@ class PostsController < ApplicationController
   def show
     @post = Post.find_by_id(params[:post_id])
     @city = City.find_by(id: @post.city_id)
+
     @user = User.find_by(id: @post.user_id)
+
   end
 
   def new
@@ -15,6 +17,7 @@ class PostsController < ApplicationController
      @post = Post.create(post_params)
      redirect_to city_path
   end
+
 
   private
   def post_params

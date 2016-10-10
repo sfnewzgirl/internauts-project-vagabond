@@ -12,13 +12,15 @@ Rails.application.routes.draw do
   post '/sessions', to: 'sessions#create'
   get '/logout', to: 'sessions#destroy'
 
-  get '/posts/:id', to: 'posts#show', as: 'post'
-  get '/posts/new', to: 'posts#new', as: 'new_post'
-  post '/posts', to: 'posts#create'
-  get '/posts/:id/edit', to: 'posts#edit', as: 'edit_post'
-  patch '/posts/:id', to: 'posts#update'
-  delete '/posts/:id', to: 'posts#destroy'
+  get '/posts/:post_id', to: 'posts#show', as: 'post'
+  get '/cities/:city_id/posts/new', to: 'posts#new', as: 'new_post'
+  post '/cities/:city_id/posts', to: 'posts#create'
 
-  get '/cities/:id', to: 'cities#show', as: 'city'
+
+  get '/posts/:post_id/edit', to: 'posts#edit', as: 'edit_post'
+  patch '/posts/:post_id', to: 'posts#update'
+  delete '/posts/:post_id', to: 'posts#destroy'
+
+  get '/cities/:city_id', to: 'cities#show', as: 'city'
 
 end
