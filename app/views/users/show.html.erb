@@ -2,7 +2,7 @@
   <div class="user">
     <img src="" alt="">
     <ul>
-      <%= image_tag @user.avatar.url(:thumb) %>
+      <%= image_tag @user.avatar.url(:thumb), class: 'profile-image' %>
       <h4><%= @user.name%></h4>
       <h4><%= @user.created_at%></h4>
       <h4><%= @user.current_city%></h4>
