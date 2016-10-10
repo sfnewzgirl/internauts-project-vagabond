@@ -9,7 +9,7 @@ users = User.create([
 	join_date: nil,
 	email: 'misha@ga.com',
 	password: '1234',
-	avatar: File.open(File.join(Rails.root, 'db', 'fixtures', 'smiley-avatar.gif'))
+	avatar: File.open(File.join(Rails.root, 'db', 'fixtures', 'red-creature-icon.png'))
 	},
 	{
 	name: 'Zach Fong',
@@ -17,7 +17,7 @@ users = User.create([
 	join_date: nil,
 	email: 'zach@ga.com',
 	password: '1234',
-	avatar: File.open(File.join(Rails.root, 'db', 'fixtures', 'smiley-avatar.gif'))
+	avatar: File.open(File.join(Rails.root, 'db', 'fixtures', 'red-creature-icon.png'))
 	},
 	{
 	name: 'Mikey Rogachevsky',
@@ -25,7 +25,7 @@ users = User.create([
 	join_date: nil,
 	email: 'mikey@ga.com',
 	password: '1234',
-	avatar: File.open(File.join(Rails.root, 'db', 'fixtures', 'smiley-avatar.gif'))
+	avatar: File.open(File.join(Rails.root, 'db', 'fixtures', 'red-creature-icon.png'))
 	},
 	{
 	name: 'Sera Bak',
@@ -33,7 +33,7 @@ users = User.create([
 	join_date: nil,
 	email: 'sera@ga.com',
 	password: '1234',
-	avatar: File.open(File.join(Rails.root, 'db', 'fixtures', 'smiley-avatar.gif'))
+	avatar: File.open(File.join(Rails.root, 'db', 'fixtures', 'red-creature-icon.png'))
 	}
 
 ])
