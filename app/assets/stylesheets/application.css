@@ -76,7 +76,7 @@ header{
 .log_nav {
   background-color: #ffa429;
 }
-.back_btn {
+.user_back_btn {
 	margin-top: 8px;
 	margin-left: 48%;
 	width: 40px;
@@ -87,6 +87,10 @@ header{
 
 .make_post {
   width: 150px;
+}
+
+.post_back_btn {
+  width: 80px;
 }
 
 .flex-grid {
