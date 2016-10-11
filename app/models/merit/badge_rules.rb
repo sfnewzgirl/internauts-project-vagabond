@@ -25,7 +25,7 @@ module Merit
       # Should be "current_user" after registration for badge to be granted.
       # Find badge by badge_id, badge_id takes presidence over badge
       grant_on 'users#create', badge_id: 01, badge: 'new-member', to: :user
-        current_user?
+      #   current_user?
         # user.email? && user.password?
       end
 
