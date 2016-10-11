@@ -1,24 +1,27 @@
-<h2>Create a New Post!</h2>
-
+<div class="city_name">
+  <h2>Create a New Post!</h2>
+</div>
 <% @post.errors.full_messages.each do |msg| %>
  <div class="error"><%= msg %></div><br>
 <% end %>
 
-<div class="form_container">
+<div class="form_container six columns offset-by-three columns">
     <div class="form">
       <%= form_for [@city, @post], url: "/cities/" + @city.id.to_s + "/posts", method: 'post' do |f| %>
 
         <%= f.label "Title"  %>
-        <%= f.text_field :title, placeholder: "Give Your Travel Tip a Title" %> <br>
+        <%= f.text_field :title, placeholder: "Post Title" %> <br>
 
         <%= f.label "Your Tip"  %>
         <%= f.text_area :content, placeholder: "Tell Us About Your Travel Tip" %> <br>
 
-        <%= f.submit "Save" %>
+        <div class="btns">
+          <%= f.submit "Save", :class => "button", :id => "edit_btn" %>
+          <%= link_to city_path, class: "rm_line" do %>
+            <div class="button user_back_btn">Back</div>
+          <% end %>
+        </div>
       <% end %>
-      <br>
-      <%= link_to city_path, class: "rm_line" do %>
-        <div class="button post_back_btn">Back</div>
-      <% end %>
+
     </div>
 </div>

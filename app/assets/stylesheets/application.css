@@ -20,14 +20,20 @@
 	/*font-family: 'Henny Penny', cursive;*/
 	font-family: 'Short Stack', cursive;
 }
+a {
+	text-decoration: none;
+	color: black;
+}
 body{
-	background: #ffe629
+	background-image: url('http://bgfons.com/upload/stars_texture2921.jpg');
 }
 header {
 	 margin-top: 5vh;
 	 display: flex;
-	 align-items: baseline;
+	 align-items: center;
 	 justify-content: space-around;
+	 background-color: rgba(255, 0, 0, 0.8);;
+	 border: 5px solid black;
 }
 nav {
 	display: flex;
@@ -36,36 +42,37 @@ nav {
 footer {
 	text-align: center;
 	color: #1d009b;
-	margin-top: 5px;
 	position: relative;
 }
 #title  {
+	align-self: center;
 	margin-left: 15px;
 	margin-right: 10px;
-	color: #1d009b;
+	color: #33c3f0;
 	font-size: 3em;
 }
 h2{
-	color:#1d009b;
+	color:#33c3f0;
 	text-align:center;
 	clear:both;
 }
 
-
 h3{
-	color:#1d009b;
+	margin-top: 15px;
+	color:black;
 	text-align:center;
 	clear:both;
 }
 
 .user_name {
-  color:#1d009b;
+  color:black;
   font-size: 35px;
   clear:both;
 }
 
 #quote {
-	color:#1d009b;
+	align-self: center;
+	color:#33c3f0;
 }
 
 .rm_line:link {
@@ -93,6 +100,9 @@ h3{
 	display: flex;
 	align-items: center;
 }
+.container {
+	height: 75vh;
+}
 .user_nav {
   background-color: #ff3e3e;
 }
@@ -110,46 +120,52 @@ h3{
 	margin-left: 48%;
 }
 #edit_btn {
+	margin-top: 8px;
 	background-color: #ffa429;
 	color: black;
 	border-color: black;
+	font-size: 1em;
 }
-
+.edit_user, .new_user, .new_post, .edit_post {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
 .row {
   margin-top: 50px;
 }
 
 .user {
-  flex: 4;
+	background: rgba(0, 255, 176, .8);
+	border: 3px solid black;
+	border-radius: 5%;
+	text-align: center;
 }
 
 .city_post {
-  line-height: 50px;
+  line-height: 100%;
 }
 .post_btn {
-	margin-left: 30%;
 	text-align: center;
 }
 .post {
-  margin-top: -32px;
-  flex: 6;
+	padding: 15px 0; 
   font-size: 1.5em;
   text-align: center;
+	background-color: rgba(255, 164, 41, .8);
+	border: 3px solid black;
+	border-radius: 5%;
 }
 
 .glyph {
   display: inline-block;
-  flex: 1;
 }
 
 .show-photo {
 	width: 100vw;
 }
-
 #map-tooltips {
-	height: 65vh;
-	margin-top: 15px;
-	margin-bottom: 0px;
+	margin-top: -30px;
 	border: 5px solid black
 }
 .form_container{
@@ -168,4 +184,25 @@ h3{
 }
 .show {
 	margin-top: 5vh;
+}
+#action_call {
+	margin: 10px 0 10px 0;
+	background-color: rgba(255, 0, 0, 0.8);
+	border: 3px solid black;
+}
+.city_name {
+	text-align: center;
+	background: rgba(255, 62, 62, .8);
+	border: 3px solid black;
+	border-radius:5%;
+}
+.city_btn {
+	line-height: 100%;
+	vertical-align: middle;
+	font-size: 0.8em;
+	background: rgba(255, 164, 41, .8);
+	padding: 10px;
+}
+.user_btn {
+	background-color:rgba(255, 164, 41, .8);
 }

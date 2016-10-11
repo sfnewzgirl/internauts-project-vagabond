@@ -19,3 +19,6 @@ schema.rb
 
 # Ignore Byebug command history file.
 .byebug_history
+
+# Ignore evil red creature
+red-creature-icon.png
