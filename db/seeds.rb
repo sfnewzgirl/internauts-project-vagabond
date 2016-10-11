@@ -8,32 +8,28 @@ users = User.create([
 	current_city: 'San Francisco',
 	join_date: nil,
 	email: 'misha@ga.com',
-	password: '1234',
-	avatar: File.open(File.join(Rails.root, 'db', 'fixtures', 'red-creature-icon.png'))
+	password: '1234'
 	},
 	{
 	name: 'Zach Fong',
 	current_city: 'San Francisco',
 	join_date: nil,
 	email: 'zach@ga.com',
-	password: '1234',
-	avatar: File.open(File.join(Rails.root, 'db', 'fixtures', 'red-creature-icon.png'))
+	password: '1234'
 	},
 	{
 	name: 'Mikey Rogachevsky',
 	current_city: 'San Francisco',
 	join_date: nil,
 	email: 'mikey@ga.com',
-	password: '1234',
-	avatar: File.open(File.join(Rails.root, 'db', 'fixtures', 'red-creature-icon.png'))
+	password: '1234'
 	},
 	{
 	name: 'Sera Bak',
 	current_city: 'San Francisco',
 	join_date: nil,
 	email: 'sera@ga.com',
-	password: '1234',
-	avatar: File.open(File.join(Rails.root, 'db', 'fixtures', 'red-creature-icon.png'))
+	password: '1234'
 	}
 
 ])
