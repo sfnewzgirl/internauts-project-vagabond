@@ -1,7 +1,9 @@
 <h2>Welcome to the Global Community!</h2>
-
-<div class="form_container">
-  <div class="form">
+<% @user.errors.full_messages.each do |msg| %>
+ <div class="error"><%= msg %></div><br>
+<% end %>
+<div class="form_container six columns offset-by-three columns">
+  <div class="form fix_form">
     <%= form_for @user do |f| %>
       <%= f.label "Name"  %>
       <%= f.text_field :name, placeholder: "John Doe"  %> <br>
@@ -15,7 +17,7 @@
       <%= f.label "Current City"  %>
       <%= f.text_field :current_city, placeholder: "San Francisco"  %> <br>
 
-      <%= f.submit "Become a Vagabond!"%>
+      <%= f.submit "Become a Vagabond!", :class => 'button', :id => "edit_btn"%>
 
     <% end %>
   </div>

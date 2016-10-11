@@ -20,19 +20,19 @@
   </head>
 
   <body>
-    <header>
-      <h1>Vagabond</h1>
-      <p>
-        "Not all who wander are lost" - J.R.R. Tolkein
+    <header class="row">
+      <h1 id="title" class="three columns">Vagabond</h1>
+      <p id="quote" class="five columns">
+        "Not all who wander are lost" - J.R.R. Tolkien
       </p>
-      <nav>
+      <nav id="nav" class="three columns">
           <div class="button">
             <%= link_to image_tag("Home.png", border: 0), root_path %>
           </div>
 
             <% if current_user %>
               <%= link_to user_path(current_user), class: "rm_line" do %>
-                <div class="button user_nav">User Profile</div>
+                <div class="button user_nav">Profile</div>
               <% end %>
 
               <%= link_to logout_path, class: "rm_line" do %>
@@ -41,7 +41,7 @@
             <% else %>
 
               <%= link_to new_user_path, class: "rm_line" do %>
-                <div class="button user_nav">Create User</div>
+                <div class="button user_nav">Join</div>
               <% end %>
 
               <%= link_to login_path, class: "rm_line" do %>
@@ -50,7 +50,9 @@
             <% end %>
       </nav>
     </header>
-
-    <%= yield %>
+    <div class="container">
+      <%= yield %>
+    </div>
+    <footer class="six columns offset-by-three columns">Developed Proudly in SF. devs=[ZF, SB, ML, MR]</footer>
   </body>
 </html>

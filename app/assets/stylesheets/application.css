@@ -9,7 +9,8 @@
  * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
- *
+ *= require normalize
+ *= require skeleton
  *= require_tree .
  *= require_self
  */
@@ -19,56 +20,88 @@
 	/*font-family: 'Henny Penny', cursive;*/
 	font-family: 'Short Stack', cursive;
 }
-body{
-	background: #ffe629
+a {
+	text-decoration: none;
+	color: black;
 }
-h1  {
-  color: #1d009b;
-  font-size: 3em;
-  margin: 0;
-	clear:both;
+body{
+	background-image: url('http://bgfons.com/upload/stars_texture2921.jpg');
+}
+header {
+	 margin-top: 5vh;
+	 display: flex;
+	 align-items: center;
+	 justify-content: space-around;
+	 background-color: rgba(255, 0, 0, 0.8);;
+	 border: 5px solid black;
+}
+nav {
+	display: flex;
+	justify-content: space-around;
+}
+footer {
+	text-align: center;
+	color: #1d009b;
+	position: relative;
+}
+#title  {
+	align-self: center;
+	margin-left: 15px;
+	margin-right: 10px;
+	color: #33c3f0;
+	font-size: 3em;
 }
 h2{
-	color:#1d009b;
+	color:#33c3f0;
 	text-align:center;
 	clear:both;
 }
-p {
-	color:#1d009b;
-}
-header h1 {
-    float:left;
-    margin-top: 1%;
-    margin-left: 3%;
- }
-header{
-		display: flex;
-    margin-top: 2%;
-    margin-right: 3%;
-		justify-content: space-around;
-		align-items: baseline;
- }
- nav {
-	 display: flex;
- }
 
- .rm_line:link {
-  text-decoration: none;
- }
+h3{
+	margin-top: 15px;
+	color:black;
+	text-align:center;
+	clear:both;
+}
+
+.user_name {
+  color:black;
+  font-size: 35px;
+  clear:both;
+}
+
+#quote {
+	align-self: center;
+	color:#33c3f0;
+}
+
+.rm_line:link {
+	text-decoration: none;
+}
 
 .button {
+	color: black;
+	font-size: 1em;
 	background: #00ffb0;
   padding: 9px;
   border-radius: 5%;
   border: 1px solid black;
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 	text-align: center;
-	height: 20px;
-	margin-left: 8px;
+	vertical-align: middle;
+	line-height: 100%;
 }
+
 .button:active {
 	box-shadow: 0 4px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
   transform: translateY(4px);
+}
+.btns {
+	display: flex;
+	align-items: center;
+}
+.container {
+	height: 75vh;
 }
 .user_nav {
   background-color: #ff3e3e;
@@ -76,63 +109,100 @@ header{
 .log_nav {
   background-color: #ffa429;
 }
+
+.error {
+  color: red;
+  text-align: center;
+  font-size: 1em;
+}
 .user_back_btn {
 	margin-top: 8px;
 	margin-left: 48%;
-	width: 40px;
 }
-.edit_profile {
-	width: 125px;
+#edit_btn {
+	margin-top: 8px;
+	background-color: #ffa429;
+	color: black;
+	border-color: black;
+	font-size: 1em;
 }
-
-.make_post {
-  width: 150px;
+.edit_user, .new_user, .new_post, .edit_post {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
 }
-
-.post_back_btn {
-  width: 80px;
-}
-
-.flex-grid {
-  display: flex;
-  padding: 30px;
+.row {
+  margin-top: 50px;
 }
 
 .user {
-  flex: 4;
+	background: rgba(0, 255, 176, .8);
+	border: 3px solid black;
+	border-radius: 5%;
+	text-align: center;
 }
 
+.city_post {
+  line-height: 100%;
+}
+.post_btn {
+	text-align: center;
+}
 .post {
-  flex: 6;
+	padding: 15px 0; 
+  font-size: 1.5em;
+  text-align: center;
+	background-color: rgba(255, 164, 41, .8);
+	border: 3px solid black;
+	border-radius: 5%;
 }
 
 .glyph {
   display: inline-block;
-  flex: 1;
 }
 
 .show-photo {
 	width: 100vw;
 }
-
-<<<<<<< HEAD
 #map-tooltips {
-	margin-top: 15px;
-	border-top: 5px solid black
+	margin-top: -30px;
+	border: 5px solid black
 }
 .form_container{
-	margin-left: 35%;
-	max-width: 30%;
-	height: 150px;
 	background: #ff3e3e;
 	border: 4px solid black;
 	border-radius: 12px;
 }
 .form {
+	display: flex;
+	justify-content: center;
 	padding: 5px;
-	text-align: center;
+	text-align: justify;
 }
-
 .profile-image {
   width: 150px;
+}
+.show {
+	margin-top: 5vh;
+}
+#action_call {
+	margin: 10px 0 10px 0;
+	background-color: rgba(255, 0, 0, 0.8);
+	border: 3px solid black;
+}
+.city_name {
+	text-align: center;
+	background: rgba(255, 62, 62, .8);
+	border: 3px solid black;
+	border-radius:5%;
+}
+.city_btn {
+	line-height: 100%;
+	vertical-align: middle;
+	font-size: 0.8em;
+	background: rgba(255, 164, 41, .8);
+	padding: 10px;
+}
+.user_btn {
+	background-color:rgba(255, 164, 41, .8);
 }
