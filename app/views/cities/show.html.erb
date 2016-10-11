@@ -12,12 +12,13 @@
       <% end %><br>
 
     </div>
+
+    <%= link_to new_post_path, class: "rm_line" do %>
+      <div class="button post_btn">
+        <%= image_tag("Plus.png", border: 0) %> Make a Post
+      </div>
   </div>
 </div>
 
-<%= link_to new_post_path, class: "rm_line" do %>
-<div class="row post_button">
-  <div class="button make_post"><%= image_tag("Pencil.png", border: 0) %>Make a Post
-  </div>
-</div>
+
 <% end %>
