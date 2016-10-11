@@ -12,8 +12,8 @@
 
       <div class="btns">
         <%= f.submit "Update", :class => "button", :id => "edit_btn"  %>
-        <%= link_to city_path, class: "rm_line" do %>
-          <div class="button user_back_btn">Back</div>
+        <%= link_to user_path(@post.user_id), class: "rm_line" do %>
+          <div class="button user_back_btn">Profile</div>
         <% end %>
       </div>
     <% end %>
