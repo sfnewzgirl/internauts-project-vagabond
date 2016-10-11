@@ -2,7 +2,6 @@ class PostsController < ApplicationController
   def show
     @post = Post.find_by_id(params[:post_id])
     @city = City.find_by(id: @post.city_id)
-
     @user = User.find_by(id: @post.user_id)
 
   end
@@ -43,6 +42,17 @@ class PostsController < ApplicationController
     city = City.find_by(id: city_id)
     post.update(post_params)
     redirect_to city_path(city)
+  end
+
+  def destroy
+    post_id = params[:id]
+    @post = Post.find_by(id: post_id)
+    city_id = @post.city_id
+    @post.delete
+    redirect_to city_path(city_id)
+    # user_id = current_user.id
+    # user = User.find_by(id: user_id)
+
   end
 
   private
