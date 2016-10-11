@@ -1,32 +1,22 @@
 <h2>Create a New Post!</h2>
 
-<<<<<<< HEAD
 <div class="form_container">
-    <div class="form">
-      <%= form_for [@city, @post], url: "/cities/" + @city.id.to_s + "/posts", method: 'post' do |f| %>
-=======
-<ul>
-  <% @post.errors.full_messages.each do |msg| %>
-   <li><%= msg %></li>
-  <% end %>
-</ul>
+  <div class="form">
+    <ul>
+      <% @post.errors.full_messages.each do |msg| %>
+       <li><%= msg %></li>
+      <% end %>
+    </ul>
 
-<%= form_for [@city, @post], url: "/cities/" + @city.id.to_s + "/posts", method: 'post' do |f| %>
->>>>>>> f6a740dd9b75d07bc5424f64e0165859f865b023
+    <%= form_for [@city, @post], url: "/cities/" + @city.id.to_s + "/posts", method: 'post' do |f| %>
 
-        <%= f.label "Title"  %>
-        <%= f.text_field :title, placeholder: "Give Your Travel Tip a Title" %> <br>
+      <%= f.label "Title"  %>
+      <%= f.text_field :title, placeholder: "Give Your Travel Tip a Title" %> <br>
 
-<<<<<<< HEAD
-        <%= f.label "Your Tip"  %>
-        <%= f.text_area :content, placeholder: "Tell Us About Your Travel Tip"  %> <br>
-=======
-  <%= f.label "Your Tip"  %>
-  <%= f.text_area :content, placeholder: "Tell Us About Your Travel Tip", :required => true  %> <br>
->>>>>>> f6a740dd9b75d07bc5424f64e0165859f865b023
+      <%= f.label "Your Tip"  %>
+      <%= f.text_area :content, placeholder: "Tell Us About Your Travel Tip", :required => true  %> <br>
 
-        <%= f.submit "Save" %>
-
+      <%= f.submit "Save" %>
       <% end %>
       <br>
       <%= link_to city_path, class: "rm_line" do %>
