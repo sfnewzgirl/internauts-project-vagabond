@@ -57,6 +57,13 @@ h3{
 	text-align:center;
 	clear:both;
 }
+
+.user_name {
+  color:#1d009b;
+  font-size: 35px;
+  clear:both;
+}
+
 #quote {
 	color:#1d009b;
 }
