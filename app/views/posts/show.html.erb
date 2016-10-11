@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 <h2><%= @post.title %></h2>
 <div class="show">
+=======
+<h2><%= @post.title %></h2> <h4><%= @city.name %></h4>
+<div class="flex-grid">
+>>>>>>> f6a740dd9b75d07bc5424f64e0165859f865b023
 
   <div class="user four columns offset-by-one column">
     <%= image_tag @user.avatar.url(:thumb), class: 'profile-image' %>
@@ -15,6 +20,6 @@
   </div>
   <div class="glyph two columns">
     <%= image_tag("Pencil.png", border: 0) %>
-    <%= image_tag("Bin.png", border: 0) %>
+    <%= link_to image_tag("Bin.png", border: 0), @post, method: "delete", data: {confirm: "Are you sure you want to delete this post?"}%>
   </div>
 </div>

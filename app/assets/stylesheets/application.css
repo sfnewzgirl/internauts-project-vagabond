@@ -47,6 +47,7 @@ h2{
 	clear:both;
 }
 
+
 h3{
 	color:#1d009b;
 	text-align:center;
@@ -80,6 +81,12 @@ h3{
 }
 .log_nav {
   background-color: #ffa429;
+}
+
+.error {
+  color: red;
+  text-align: center;
+  font-size: 1em;
 }
 .user_back_btn {
 	margin-top: 8px;
@@ -123,6 +130,10 @@ h3{
 .glyph {
   display: inline-block;
   flex: 1;
+}
+
+.show-photo {
+	width: 100vw;
 }
 
 #map-tooltips {

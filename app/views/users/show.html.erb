@@ -14,6 +14,7 @@
       </ul>
     </div>
 
+<<<<<<< HEAD
     <div class="post six columns">
         <h3>Posts!</h3>
         <% @user.posts.each do |post| %>
@@ -24,4 +25,17 @@
           </div><br>
         <% end %>
     </div>
+=======
+  <div class="post six columns">
+      <% user = @user.posts.sort_by {|post| post.created_at} %>
+      <% user.reverse.each do |post| %>
+        <%= link_to post.title, post_path(post) %><br>
+        <div class="glyph">
+          <%= image_tag("Pencil.png", border: 0) %>
+          <%= image_tag("Bin.png", border: 0) %>
+        </div>
+        <hr>
+      <% end %>
+>>>>>>> f6a740dd9b75d07bc5424f64e0165859f865b023
   </div>
+

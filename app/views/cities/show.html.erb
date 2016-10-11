@@ -5,15 +5,34 @@
 
   <div class="five columns offset-by-one column">
     <div class="post">
+<<<<<<< HEAD
     <% city = @city.posts.sort_by {|post| post.created_at} %>
     <% city.reverse.each do |post| %>
       <div class="city_post"><%= link_to post.title, post_path(post.id) %></div>
     <% end %><br>
     </div>
+=======
 
-<div class="row post_button">
+        <% city = @city.posts.sort_by {|post| post.created_at} %>
+        <% city.reverse.each do |post| %>
+          <div class="city_post"><%= link_to post.title, post_path(post.id) %></div>
+        <% end %><br>
+
+    </div>
+  </div>
+</div>
+>>>>>>> f6a740dd9b75d07bc5424f64e0165859f865b023
+
+
   <%= link_to new_post_path, class: "rm_line" do %>
+  <div class="row post_button">
     <div class="button make_post"><%= image_tag("Pencil.png", border: 0) %>Make a Post
     </div>
+  </div>
   <% end %>
+<<<<<<< HEAD
 </div>
+=======
+
+
+>>>>>>> f6a740dd9b75d07bc5424f64e0165859f865b023
