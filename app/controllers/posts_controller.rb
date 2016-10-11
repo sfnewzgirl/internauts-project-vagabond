@@ -13,9 +13,15 @@ class PostsController < ApplicationController
   end
 
   def create
+    city_id = params[:city_id]
+    @city = City.find_by(id: city_id)
     if current_user
       @post = Post.create(post_params)
-      redirect_to city_path
+      if @post.save
+        redirect_to city_path
+      else
+        render 'new'
+      end
 
     #  @post.user = current_user
     #  post = post_params.merge({author: current_user.name})
