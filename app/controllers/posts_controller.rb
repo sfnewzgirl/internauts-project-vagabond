@@ -61,9 +61,10 @@ class PostsController < ApplicationController
   def destroy
     post_id = params[:id]
     @post = Post.find_by(id: post_id)
+    @user = User.find_by(id: @post.user_id)
     city_id = @post.city_id
     @post.delete
-    redirect_to city_path(city_id)
+    redirect_to user_path(@user)
     # user_id = current_user.id
     # user = User.find_by(id: user_id)
 
