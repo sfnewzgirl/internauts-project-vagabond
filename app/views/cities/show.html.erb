@@ -5,36 +5,11 @@
 
   <div class="five columns offset-by-one column">
     <div class="post">
-
-        <% city = @city.posts.sort_by {|post| post.created_at} %>
-        <% city.reverse.each do |post| %>
-          <div class="city_post"><%= link_to post.title, post_path(post.id) %></div>
-        <% end %><br>
-
-<<<<<<< HEAD
-<div class="flex-grid">
-  <div class="user">
-    <ul>
-      <% @city.posts.each do |post| %>
-      <li><%= post.author %></li>
-      <% end %>
-    </ul>
-  </div>
-  <div class="post">
-    <ul>
-      <% @city.posts.each do |post| %>
-        <li><%= link_to post.title, post_path(post.id) %></li>
-      <% end %><br>
-      <%= link_to new_post_path, class: "rm_line" do %>
-        <div class="button make_post"><%= image_tag("Plus.png", border: 0) %>Make a Post
-        </div>
-      <% end %>
-    </ul>
-=======
+    <% city = @city.posts.sort_by {|post| post.created_at} %>
+    <% city.reverse.each do |post| %>
+      <div class="city_post"><%= link_to post.title, post_path(post.id) %></div>
+    <% end %><br>
     </div>
->>>>>>> f4331afcdec19ab50ffe9cecdc14b6eebbbd62a8
-  </div>
-</div>
 
 <div class="row post_button">
   <%= link_to new_post_path, class: "rm_line" do %>
@@ -42,4 +17,3 @@
     </div>
   <% end %>
 </div>
-
