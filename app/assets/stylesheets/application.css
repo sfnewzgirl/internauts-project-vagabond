@@ -29,6 +29,9 @@ header {
 	 align-items: baseline;
 	 justify-content: space-around;
 }
+nav {
+	margin-left: 8px;
+}
 footer {
 	text-align: center;
 	color: #1d009b;
@@ -70,12 +73,13 @@ h3{
   border: 1px solid black;
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 	text-align: center;
-	margin-left: 8px;
 }
+
 .button:active {
 	box-shadow: 0 4px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
   transform: translateY(4px);
 }
+
 .user_nav {
   background-color: #ff3e3e;
 }
@@ -108,24 +112,15 @@ h3{
 .city_post {
   line-height: 50px;
 }
-
+.post_btn {
+	margin-left: 30%; 
+	text-align: center;
+}
 .post {
   margin-top: -32px;
   flex: 6;
   font-size: 1.5em;
   text-align: center;
-}
-
-.post_button {
-  position: relative;
-  margin-top: -100px;
-}
-
-.make_post{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 
 .glyph {
