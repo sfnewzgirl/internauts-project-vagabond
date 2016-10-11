@@ -32,7 +32,7 @@
 
             <% if current_user %>
               <%= link_to user_path(current_user), class: "rm_line" do %>
-                <div class="button user_nav">User Profile</div>
+                <div class="button user_nav">Profile</div>
               <% end %>
 
               <%= link_to logout_path, class: "rm_line" do %>
@@ -50,7 +50,9 @@
             <% end %>
       </nav>
     </header>
-
-    <%= yield %>
+    <div class="container">
+      <%= yield %>
+    </div>
+    <footer class="six columns offset-by-three columns">Developed Proudly in SF. devs=[ZF, SB, ML, MR]</footer>
   </body>
 </html>

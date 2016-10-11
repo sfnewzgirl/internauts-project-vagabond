@@ -1,26 +1,23 @@
-<h2><%= @city.name %></h2>
+<h3><%= @city.name %></h3>
+<div class="row">
 
-<%= image_tag @city.photo, class: 'show-photo four columns' %><br>
+  <%= image_tag @city.photo, class: 'show-photo six columns' %><br>
 
+  <div class="five columns offset-by-one column">
+    <div class="post">
 
-
-<div class="flex-grid">
-  <div class="user">
-    <ul>
-      <% @city.posts.each do |post| %>
-      <li><%= post.author %></li>
-      <% end %>
-    </ul>
-  </div>
-  <div class="post">
-    <ul>
-      <% @city.posts.each do |post| %>
-        <li><%= link_to post.title, post_path(post.id) %></li>
+      <% city = @city.posts.sort_by {|post| post.created_at} %>
+      <% city.reverse.each do |post| %>
+        <div class="city_post"><%= link_to post.title, post_path(post.id) %></div>
       <% end %><br>
-      <%= link_to new_post_path, class: "rm_line" do %>
-        <div class="button make_post"><%= image_tag("Pencil.png", border: 0) %>Make a Post
-        </div>
-      <% end %>
-    </ul>
+
+    </div>
   </div>
 </div>
+
+<%= link_to new_post_path, class: "rm_line" do %>
+<div class="row post_button">
+  <div class="button make_post"><%= image_tag("Pencil.png", border: 0) %>Make a Post
+  </div>
+</div>
+<% end %>

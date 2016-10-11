@@ -4,6 +4,7 @@ class UsersController < ApplicationController
   end
   def show
     @user = User.find_by_id(params[:id])
+
   end
   def new
     @user = User.new
@@ -15,13 +16,21 @@ class UsersController < ApplicationController
       login(user)
       redirect_to user_path(user.id)
     else
-      flash[:sign_up_error] = "Something went wrong, please try again"
+      flash[:sign_up_error] = "That email has already been taken."
       redirect_to new_user_path
     end
   end
   def edit
     user_id = params[:id]
     @user = User.find_by_id(user_id)
+
+    unless current_user == @user
+      if current_user
+        redirect_to user_path(current_user.id)
+      else
+        redirect_to login_path
+      end
+    end
   end
   def update
     user_id = params[:id]

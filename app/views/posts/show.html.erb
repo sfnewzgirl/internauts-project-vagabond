@@ -1,8 +1,8 @@
-<h2><%= @post.title %></h2>
-<div class="flex-grid">
+<h2><%= @post.title %></h2> <h4><%= @city.name %></h4>
+<div class="show flex-grid">
 
-  <div class="user">
-    <img src="" alt="">
+  <div class="user four columns offset-by-one column">
+    <%= image_tag @user.avatar.url(:thumb), class: 'profile-image' %>
     <ul>
       <h4><%= link_to @post.author, user_path(@post.user_id) %></h4>
       <h4><%= @post.created_at %></h4>
@@ -10,7 +10,15 @@
     </ul>
   </div>
 
-  <div class="post">
+  <div class="post five columns">
     <%= @post.content %>
+  </div>
+
+  <div class="glyph two columns">
+    <% if current_user && current_user == @post.user %>
+      <%= link_to image_tag("Pencil.png", border: 0), edit_post_path(@city, @post) %>
+      <%= link_to image_tag("Bin.png", border: 0), @post, method: "delete", data: {confirm: "Are you sure you want to delete this post?"}%>
+    <% end %>
+
   </div>
 </div>

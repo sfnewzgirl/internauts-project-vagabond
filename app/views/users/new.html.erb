@@ -1,6 +1,9 @@
 <h2>Welcome to the Global Community!</h2>
-
-<div class="form_container">
+<% flash.each do |name, msg| %>
+    <div class="error"><%= msg %></div>
+    <br>
+    <% end %>
+<div class="form_container six columns offset-by-three columns">
   <div class="form">
     <%= form_for @user do |f| %>
       <%= f.label "Name"  %>
@@ -15,7 +18,7 @@
       <%= f.label "Current City"  %>
       <%= f.text_field :current_city, placeholder: "San Francisco"  %> <br>
 
-      <%= f.submit "Become a Vagabond!"%>
+      <%= f.submit "Become a Vagabond!", :class => 'button save_changes'%>
 
     <% end %>
   </div>

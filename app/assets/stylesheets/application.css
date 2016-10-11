@@ -29,28 +29,37 @@ header {
 	 align-items: baseline;
 	 justify-content: space-around;
 }
-nav {
-	float: right;
-	display: flex;
+footer {
+	text-align: center;
+	color: #1d009b;
+	position: fixed;
+	bottom: 5px;
 }
- #title  {
-	 margin-left: 15px;
-	 margin-right: 10px;
-   color: #1d009b;
-   font-size: 3em;
- }
- h2{
- 	color:#1d009b;
- 	text-align:center;
- 	clear:both;
- }
-  #quote {
- 	color:#1d009b;
- }
+#title  {
+	margin-left: 15px;
+	margin-right: 10px;
+	color: #1d009b;
+	font-size: 3em;
+}
+h2{
+	color:#1d009b;
+	text-align:center;
+	clear:both;
+}
 
- .rm_line:link {
-  text-decoration: none;
- }
+
+h3{
+	color:#1d009b;
+	text-align:center;
+	clear:both;
+}
+#quote {
+	color:#1d009b;
+}
+
+.rm_line:link {
+	text-decoration: none;
+}
 
 .button {
 	color: black;
@@ -73,23 +82,50 @@ nav {
 .log_nav {
   background-color: #ffa429;
 }
+
+.error {
+  color: red;
+  text-align: center;
+  font-size: 1em;
+}
 .user_back_btn {
 	margin-top: 8px;
 	margin-left: 48%;
 }
+.save_changes {
+	background-color: #ffa429;
+	color: black;
+}
 
-
-.flex-grid {
-  display: flex;
-  padding: 30px;
+.row {
+  margin-top: 50px;
 }
 
 .user {
   flex: 4;
 }
 
+.city_post {
+  line-height: 50px;
+}
+
 .post {
+  margin-top: -32px;
   flex: 6;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.post_button {
+  position: relative;
+  margin-top: -100px;
+}
+
+.make_post{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .glyph {
@@ -97,9 +133,15 @@ nav {
   flex: 1;
 }
 
+.show-photo {
+	width: 100vw;
+}
+
 #map-tooltips {
+	height: 65vh;
 	margin-top: 15px;
-	border-top: 5px solid black
+	margin-bottom: 0px;
+	border: 5px solid black
 }
 .form_container{
 	background: #ff3e3e;
@@ -107,9 +149,14 @@ nav {
 	border-radius: 12px;
 }
 .form {
+	display: flex;
+	justify-content: center;
 	padding: 5px;
 	text-align: justify;
 }
 .profile-image {
   width: 150px;
+}
+.show {
+	margin-top: 5vh;
 }
