@@ -1,28 +1,30 @@
 <h2>Profile!</h2>
-<div class="flex-grid">
-  <div class="user">
-    <img src="" alt="">
-    <ul>
-      <%= image_tag @user.avatar.url(:thumb), class: 'profile-image' %>
-      <h4><%= @user.name%></h4>
-      <h4><%= @user.created_at%></h4>
-      <h4><%= @user.current_city%></h4>
-      <%= link_to edit_user_path, class: "rm_line" do %>
-        <div class="button edit_profile"> <%= image_tag("Pencil.png", border: 0) %>Edit Profile</div>
-      <% end %>
-    </ul>
-  </div>
+  <div class="show">
+    <div class="user four columns">
+      <div class="user_name">Hello <%= @user.name %>!</div>
+      <ul>
+        <%= image_tag @user.avatar.url(:thumb), class: 'profile-image' %>
+        <h4><b>Current City:</b><br><%= @user.current_city%></h4>
+        <%= link_to edit_user_path, class: "rm_line" do %>
+          <% if current_user && current_user == @user %>
+            <div class="button edit_profile"> <%= image_tag("Pencil.png", border: 0) %>Edit Profile</div>
+          <% end %>
+        <% end %>
+      </ul>
+    </div>
 
-  <div class="post">
-      <% @user.posts.each do |post| %>
-        <%= link_to post.title, post_path(post) %><br>
-        <%= post.author %><br>
-        <%= post.content %>
+  <div class="post six columns">
+    <h3>Posts!</h3>
+      <% user = @user.posts.sort_by {|post| post.created_at} %>
+      <% user.reverse.each do |post| %>
+        <%= link_to post.title, post_path(post) %>
         <div class="glyph">
-          <%= image_tag("Pencil.png", border: 0) %>
-          <%= image_tag("Bin.png", border: 0) %>
+          <% if current_user && current_user == @user %>
+            <%= link_to image_tag("Pencil.png", border: 0), edit_post_path(post.city_id, post.id) %>
+            <%= link_to image_tag("Bin.png", border: 0), delete_post_path(post.id), method: "delete", data: {confirm: "Are you sure you want to delete this post?"}%>
+          <% end %>
         </div>
         <hr>
       <% end %>
   </div>
-</div>
+
