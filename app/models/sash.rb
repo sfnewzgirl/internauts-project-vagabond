@@ -1,0 +1,2 @@
+class Sash < ApplicationRecord
+end
