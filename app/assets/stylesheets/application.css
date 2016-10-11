@@ -20,6 +20,10 @@
 	/*font-family: 'Henny Penny', cursive;*/
 	font-family: 'Short Stack', cursive;
 }
+a {
+	text-decoration: none;
+	color: black;
+}
 body{
 	background-image: url('http://bgfons.com/upload/stars_texture2921.jpg');
 }
@@ -28,7 +32,7 @@ header {
 	 display: flex;
 	 align-items: center;
 	 justify-content: space-around;
-	 background-color: rgba(255, 0, 0, 0.5);;
+	 background-color: rgba(255, 0, 0, 0.8);;
 	 border: 5px solid black;
 }
 nav {
@@ -54,13 +58,14 @@ h2{
 }
 
 h3{
-	color:#33c3f0;
+	margin-top: 15px;
+	color:black;
 	text-align:center;
 	clear:both;
 }
 
 .user_name {
-  color:#1d009b;
+  color:black;
   font-size: 35px;
   clear:both;
 }
@@ -121,40 +126,45 @@ h3{
 	border-color: black;
 	font-size: 1em;
 }
-
+.edit_user, .new_user, .new_post {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
 .row {
   margin-top: 50px;
 }
 
 .user {
-  flex: 4;
+	background: rgba(0, 255, 176, .8);
+	border: 3px solid black;
+	border-radius: 5%;
+	text-align: center;
 }
 
 .city_post {
-  line-height: 50px;
+  line-height: 100%;
 }
 .post_btn {
-	margin-left: 30%;
 	text-align: center;
 }
 .post {
-  margin-top: -32px;
-  flex: 6;
   font-size: 1.5em;
   text-align: center;
+	background-color: rgba(255, 164, 41, .8);
+	border: 3px solid black;
+	border-radius: 5%;
 }
 
 .glyph {
   display: inline-block;
-  flex: 1;
 }
 
 .show-photo {
 	width: 100vw;
 }
-
 #map-tooltips {
-	margin-top: -50px;
+	margin-top: -30px;
 	border: 5px solid black
 }
 .form_container{
@@ -173,4 +183,25 @@ h3{
 }
 .show {
 	margin-top: 5vh;
+}
+#action_call {
+	margin: 10px 0 10px 0;
+	background-color: rgba(255, 0, 0, 0.8);
+	border: 3px solid black;
+}
+.city_name {
+	text-align: center;
+	background: rgba(255, 62, 62, .8);
+	border: 3px solid black;
+	border-radius:5%;
+}
+.city_btn {
+	line-height: 100%;
+	vertical-align: middle;
+	font-size: 0.8em;
+	background: rgba(255, 164, 41, .8);
+	padding: 10px;
+}
+.user_btn {
+	background-color:rgba(255, 164, 41, .8);
 }

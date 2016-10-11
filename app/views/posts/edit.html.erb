@@ -3,7 +3,7 @@
 <%= form_for [@city, @post], url: "/cities/" + @city.id.to_s + "/posts/" + @post.id.to_s, method: 'patch' do |f| %>
 
   <%= f.label "Title"  %>
-  <%= f.text_field :title, placeholder: "Give Your Travel Tip a Title" %> <br>
+  <%= f.text_field :title, placeholder: "Post Title" %> <br>
 
   <%= f.label "Your Tip"  %>
   <%= f.text_area :content, placeholder: "Tell Us About Your Travel Tip"  %> <br>
