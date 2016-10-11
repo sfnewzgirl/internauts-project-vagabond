@@ -29,36 +29,48 @@ header {
 	 align-items: baseline;
 	 justify-content: space-around;
 }
-
 nav {
-	float: right;
 	display: flex;
+	justify-content: space-around;
+}
+footer {
+	text-align: center;
+	color: #1d009b;
+	margin-top: 5px;
+	position: relative;
+}
+#title  {
+	margin-left: 15px;
+	margin-right: 10px;
+	color: #1d009b;
+	font-size: 3em;
+}
+h2{
+	color:#1d009b;
+	text-align:center;
+	clear:both;
 }
 
- #title  {
-	 margin-left: 15px;
-	 margin-right: 10px;
-   color: #1d009b;
-   font-size: 3em;
- }
- h2{
- 	color:#1d009b;
- 	text-align:center;
- 	clear:both;
- }
 
- h3{
+h3{
+	color:#1d009b;
+	text-align:center;
+	clear:both;
+}
+
+.user_name {
   color:#1d009b;
-  text-align:center;
+  font-size: 35px;
   clear:both;
- }
-  #quote {
- 	color:#1d009b;
- }
+}
 
- .rm_line:link {
-  text-decoration: none;
- }
+#quote {
+	color:#1d009b;
+}
+
+.rm_line:link {
+	text-decoration: none;
+}
 
 .button {
 	color: black;
@@ -69,11 +81,17 @@ nav {
   border: 1px solid black;
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 	text-align: center;
-	margin-left: 8px;
+	vertical-align: middle;
+	line-height: 100%;
 }
+
 .button:active {
 	box-shadow: 0 4px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
   transform: translateY(4px);
+}
+.btns {
+	display: flex;
+	align-items: center;
 }
 .user_nav {
   background-color: #ff3e3e;
@@ -91,14 +109,10 @@ nav {
 	margin-top: 8px;
 	margin-left: 48%;
 }
-.save_changes {
+#edit_btn {
 	background-color: #ffa429;
 	color: black;
-}
-
-.flex-grid {
-  display: flex;
-  padding: 30px;
+	border-color: black;
 }
 
 .row {
@@ -112,23 +126,15 @@ nav {
 .city_post {
   line-height: 50px;
 }
-
+.post_btn {
+	margin-left: 30%;
+	text-align: center;
+}
 .post {
   margin-top: -32px;
   flex: 6;
   font-size: 1.5em;
   text-align: center;
-}
-
-.post_button {
-  position: relative;
-}
-
-.make_post{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 
 .glyph {
@@ -141,8 +147,10 @@ nav {
 }
 
 #map-tooltips {
+	height: 65vh;
 	margin-top: 15px;
-	border-top: 5px solid black
+	margin-bottom: 0px;
+	border: 5px solid black
 }
 .form_container{
 	background: #ff3e3e;
@@ -157,4 +165,7 @@ nav {
 }
 .profile-image {
   width: 150px;
+}
+.show {
+	margin-top: 5vh;
 }

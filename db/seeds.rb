@@ -43,7 +43,7 @@ users = User.create([
 City.create({
 	name: 'San Francisco',
 	photo: 'SF.jpeg'
-		})
+	})
 
 City.create({
 	name: 'London',
@@ -56,49 +56,49 @@ City.create({
 	})
 
 x = 1
-3.times do	
+3.times do
 	Post.create({
-		title: "Some Title" + x.to_s,
+		title: "Some Title" + " " + x.to_s,
 	  	author: 'Misha LeClair',
 	  	content: FFaker::HipsterIpsum.paragraph,
 	  	user_id: 1,
 	  	city_id: x
 	  	})
 	x += 1
-end	
+end
 
 y = 1
-3.times do	
+3.times do
 	Post.create({
-		title: 'Some Title' + y.to_s,
+		title: 'Some Title' + " "  + y.to_s,
 	  	author: 'Zach Fong',
 	  	content: FFaker::HipsterIpsum.paragraph,
 	  	user_id: 2,
 	  	city_id: y
 	  	})
 	y += 1
-end	
+end
 
 z = 1
-3.times do	
+3.times do
 	Post.create({
-		title: 'Some Title' + z.to_s,
+		title: 'Some Title' + " "  + z.to_s,
 	  	author: 'Mikey Rogachevsky',
 	  	content: FFaker::HipsterIpsum.paragraph,
 	  	user_id: 3,
 	  	city_id: z
 	  	})
 	z += 1
-end	
+end
 
 a = 1
-3.times do	
+3.times do
 	Post.create({
-		title: 'Some Title' + a.to_s,
+		title: 'Some Title' + " "  + a.to_s,
 	  	author: 'Sera Bak',
 	  	content: FFaker::HipsterIpsum.paragraph,
 	  	user_id: 4,
 	  	city_id: a
 	  	})
 	z += 1
-end	
+end

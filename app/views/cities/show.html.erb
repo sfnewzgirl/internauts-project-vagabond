@@ -6,21 +6,19 @@
   <div class="five columns offset-by-one column">
     <div class="post">
 
-        <% city = @city.posts.sort_by {|post| post.created_at} %>
-        <% city.reverse.each do |post| %>
-          <div class="city_post"><%= link_to post.title, post_path(post.id) %></div>
-        <% end %><br>
+      <% city = @city.posts.sort_by {|post| post.created_at} %>
+      <% city.reverse.each do |post| %>
+        <div class="city_post"><%= link_to post.title, post_path(post.id) %></div>
+      <% end %><br>
 
     </div>
+
+    <%= link_to new_post_path, class: "rm_line" do %>
+      <div class="button post_btn">
+        <%= image_tag("Plus.png", border: 0) %> Make a Post
+      </div>
   </div>
 </div>
 
 
-  <%= link_to new_post_path, class: "rm_line" do %>
-  <div class="row post_button">
-    <div class="button make_post"><%= image_tag("Pencil.png", border: 0) %>Make a Post
-    </div>
-  </div>
-  <% end %>
-
-
+<% end %>
