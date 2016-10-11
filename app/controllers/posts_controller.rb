@@ -14,10 +14,16 @@ class PostsController < ApplicationController
   end
 
   def create
-     @post = Post.create(post_params)
+    if current_user
+      @post = Post.create(post_params)
+      redirect_to city_path
+
     #  @post.user = current_user
     #  post = post_params.merge({author: current_user.name})
-     redirect_to city_path
+    else
+     flash[:create_post_error] = "Please log in."
+     redirect_to login_path
+    end
 
 # author: current_user.name,
 

@@ -1,12 +1,18 @@
 <h1>Create a New Post!</h1>
 
+<ul>
+  <% @post.errors.full_messages.each do |msg| %>
+   <li><%= msg %></li>
+  <% end %>
+</ul>
+
 <%= form_for [@city, @post], url: "/cities/" + @city.id.to_s + "/posts", method: 'post' do |f| %>
 
   <%= f.label "Title"  %>
   <%= f.text_field :title, placeholder: "Give Your Travel Tip a Title" %> <br>
 
   <%= f.label "Your Tip"  %>
-  <%= f.text_area :content, placeholder: "Tell Us About Your Travel Tip"  %> <br>
+  <%= f.text_area :content, placeholder: "Tell Us About Your Travel Tip", :required => true  %> <br>
 
   <%= f.submit "Save" %>
 
