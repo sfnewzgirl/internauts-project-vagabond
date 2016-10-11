@@ -29,10 +29,13 @@ header {
 	 align-items: baseline;
 	 justify-content: space-around;
 }
+<<<<<<< HEAD
 nav {
 	float: right;
 	display: flex;
 }
+=======
+>>>>>>> 8b6cab9dac3afb9ee4e1be8d6accecb690837ef9
 
  #title  {
 	 margin-left: 15px;
@@ -95,6 +98,7 @@ nav {
 	color: black;
 }
 
+<<<<<<< HEAD
 .flex-grid {
   display: flex;
   padding: 30px;

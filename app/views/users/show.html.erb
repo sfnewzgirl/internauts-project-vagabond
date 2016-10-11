@@ -1,6 +1,5 @@
 <h2>Profile!</h2>
-<div class="flex-grid">
-  <div class="user">
+  <div class="user four columns">
     <img src="" alt="">
     <ul>
       <%= image_tag @user.avatar.url(:thumb), class: 'profile-image' %>
@@ -13,7 +12,7 @@
     </ul>
   </div>
 
-  <div class="post">
+  <div class="post six columns">
       <% @user.posts.each do |post| %>
         <%= link_to post.title, post_path(post) %><br>
         <div class="glyph">
@@ -23,4 +22,3 @@
         <hr>
       <% end %>
   </div>
-</div>
