@@ -24,3 +24,10 @@
       <% end %>
   </div>
 
+  <div>
+    <ul>
+    <% current_user.badges.each do |badge| %>
+      <li><%= badge.name %></li>
+    <% end %>
+    </ul>
+  </div>

@@ -31,3 +31,29 @@ end
 # }].each do |attrs|
 #   Merit::Badge.create! attrs
 # end
+
+Merit::Badge.create(
+  id: 01,
+  name: "new-member",
+  description: "Joined Vagabond"
+)
+Merit::Badge.create(
+  id: 02,
+  name: "three-cities",
+  description: "Wrote a post for 3 cities"
+)
+Merit::Badge.create(
+  id: 1,
+  name: "sf-post",
+  description: "Wrote a post for San Francisco"
+)
+Merit::Badge.create(
+  id: 2,
+  name: "london-post",
+  description: "Wrote a post for London"
+)
+Merit::Badge.create(
+  id: 3,
+  name: "gibraltar-post",
+  description: "Wrote a post for Gibraltar"
+)

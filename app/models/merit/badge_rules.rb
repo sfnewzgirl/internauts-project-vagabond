@@ -24,7 +24,10 @@ module Merit
       # If it creates user, grant badge
       # Should be "current_user" after registration for badge to be granted.
       # Find badge by badge_id, badge_id takes presidence over badge
-      # grant_on 'users#create', badge_id: 7, badge: 'just-registered', to: :itself
+      grant_on 'users#create', badge_id: 01, badge: 'new-member', to: :user
+        current_user?
+        # user.email? && user.password?
+      end
 
       # If it has 10 comments, grant commenter-10 badge
       # grant_on 'comments#create', badge: 'commenter', level: 10 do |comment|
@@ -46,4 +49,3 @@ module Merit
       # end
     end
   end
-end
