@@ -163,6 +163,7 @@ h3{
 
 .show-photo {
 	width: 100vw;
+
 }
 #map-tooltips {
 	margin-top: -30px;
@@ -181,6 +182,8 @@ h3{
 }
 .profile-image {
   width: 150px;
+  border-radius: 5% 5% 0 0;
+
 }
 .show {
 	margin-top: 5vh;
