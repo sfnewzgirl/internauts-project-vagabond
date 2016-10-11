@@ -4,6 +4,7 @@ class UsersController < ApplicationController
   end
   def show
     @user = User.find_by_id(params[:id])
+
   end
   def new
     @user = User.new
@@ -22,6 +23,10 @@ class UsersController < ApplicationController
   def edit
     user_id = params[:id]
     @user = User.find_by_id(user_id)
+
+    unless current_user == @user
+      redirect_to user_path(current_user.id)
+    end
   end
   def update
     user_id = params[:id]
