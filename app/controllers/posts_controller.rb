@@ -33,6 +33,10 @@ class PostsController < ApplicationController
     @post = Post.find_by(id: post_id)
     city_id = params[:city_id]
     @city = City.find_by(id: city_id)
+
+    unless current_user == @post.user
+      redirect_to user_path(current_user.id)
+    end
   end
 
   def update
