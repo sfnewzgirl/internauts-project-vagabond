@@ -30,13 +30,14 @@ header {
 	 justify-content: space-around;
 }
 nav {
-	margin-left: 8px;
+	display: flex;
+	justify-content: space-around;
 }
 footer {
 	text-align: center;
 	color: #1d009b;
-	position: fixed;
-	bottom: 5px;
+	margin-top: 5px;
+	position: relative;
 }
 #title  {
 	margin-left: 15px;
@@ -73,13 +74,18 @@ h3{
   border: 1px solid black;
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 	text-align: center;
+	vertical-align: middle;
+	line-height: 100%;
 }
 
 .button:active {
 	box-shadow: 0 4px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
   transform: translateY(4px);
 }
-
+.btns {
+	display: flex;
+	align-items: center;
+}
 .user_nav {
   background-color: #ff3e3e;
 }
@@ -96,9 +102,10 @@ h3{
 	margin-top: 8px;
 	margin-left: 48%;
 }
-.save_changes {
+#edit_btn {
 	background-color: #ffa429;
 	color: black;
+	border-color: black;
 }
 
 .row {
