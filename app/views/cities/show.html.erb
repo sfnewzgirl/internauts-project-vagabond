@@ -9,7 +9,7 @@
 
       <% city = @city.posts.sort_by {|post| post.created_at} %>
       <% city.reverse.each do |post| %>
-        <div class="city_post button six columns offset-by-three columns"><%= link_to post.title, post_path(post.id) %></div>
+        <div class="city_post six columns offset-by-three columns"><%= link_to post.title, post_path(post.id) %></div>
       <% end %><br>
 
       <%= link_to new_post_path, class: "rm_line" do %>
