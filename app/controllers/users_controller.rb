@@ -25,7 +25,11 @@ class UsersController < ApplicationController
     @user = User.find_by_id(user_id)
 
     unless current_user == @user
-      redirect_to user_path(current_user.id)
+      if current_user
+        redirect_to user_path(current_user.id)
+      else
+        redirect_to login_path
+      end
     end
   end
   def update

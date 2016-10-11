@@ -35,7 +35,11 @@ class PostsController < ApplicationController
     @city = City.find_by(id: city_id)
 
     unless current_user == @post.user
-      redirect_to user_path(current_user.id)
+      if current_user
+        redirect_to user_path(current_user.id)
+      else
+        redirect_to login_path
+      end
     end
   end
 
