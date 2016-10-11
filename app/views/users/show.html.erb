@@ -1,7 +1,6 @@
-<h2>Profile!</h2>
   <div class="show">
-    <div class="user four columns">
-      <div class="user_name">Hello <%= @user.name %>!</div>
+    <div class="user five columns">
+      <div class="user_name"><%= @user.name %>!</div>
       <ul>
         <%= image_tag @user.avatar.url(:thumb) || File.open(File.join(Rails.root, 'db', 'fixtures', 'red-creature-icon.png')), class: 'profile-image' %>
         <h4><b>Current City:</b><br><%= @user.current_city%></h4>
@@ -13,7 +12,7 @@
       </ul>
     </div>
 
-  <div class="post six columns">
+  <div class="post five columns offset-by-one column">
     <h3>Posts!</h3>
       <% user = @user.posts.sort_by {|post| post.created_at} %>
       <% user.reverse.each do |post| %>
@@ -27,4 +26,3 @@
         <hr>
       <% end %>
   </div>
-
