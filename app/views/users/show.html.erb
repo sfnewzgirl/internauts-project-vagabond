@@ -1,17 +1,31 @@
 <h2>Profile!</h2>
-  <div class="user four columns">
-    <img src="" alt="">
-    <ul>
-      <%= image_tag @user.avatar.url(:thumb), class: 'profile-image' %>
-      <h4><%= @user.name%></h4>
-      <h4><%= @user.created_at%></h4>
-      <h4><%= @user.current_city%></h4>
-      <%= link_to edit_user_path, class: "rm_line" do %>
-        <div class="button edit_profile"> <%= image_tag("Pencil.png", border: 0) %>Edit Profile</div>
-      <% end %>
-    </ul>
-  </div>
+  <div class="show">
+    <div class="user four columns">
+      <h3>User!</h3>
+      <img src="" alt="">
+      <ul>
+        <%= image_tag @user.avatar.url(:thumb), class: 'profile-image' %>
+        <h4><%= @user.name%></h4>
+        <h4><%= @user.created_at%></h4>
+        <h4><%= @user.current_city%></h4>
+        <%= link_to edit_user_path, class: "rm_line" do %>
+          <div class="button edit_profile"> <%= image_tag("Pencil.png", border: 0) %>Edit Profile</div>
+        <% end %>
+      </ul>
+    </div>
 
+<<<<<<< HEAD
+    <div class="post six columns">
+        <h3>Posts!</h3>
+        <% @user.posts.each do |post| %>
+          <%= link_to post.title, post_path(post) %>
+          <div class="glyph">
+            <%= image_tag("Pencil.png", border: 0) %>
+            <%= image_tag("Bin.png", border: 0) %>
+          </div><br>
+        <% end %>
+    </div>
+=======
   <div class="post six columns">
       <% user = @user.posts.sort_by {|post| post.created_at} %>
       <% user.reverse.each do |post| %>
@@ -22,5 +36,6 @@
         </div>
         <hr>
       <% end %>
+>>>>>>> f6a740dd9b75d07bc5424f64e0165859f865b023
   </div>
 

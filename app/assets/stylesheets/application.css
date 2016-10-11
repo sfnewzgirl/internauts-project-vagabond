@@ -29,36 +29,37 @@ header {
 	 align-items: baseline;
 	 justify-content: space-around;
 }
-
-nav {
-	float: right;
-	display: flex;
+footer {
+	text-align: center;
+	color: #1d009b;
+	position: fixed;
+	bottom: 5px;
+}
+#title  {
+	margin-left: 15px;
+	margin-right: 10px;
+	color: #1d009b;
+	font-size: 3em;
+}
+h2{
+	color:#1d009b;
+	text-align:center;
+	clear:both;
 }
 
- #title  {
-	 margin-left: 15px;
-	 margin-right: 10px;
-   color: #1d009b;
-   font-size: 3em;
- }
- h2{
- 	color:#1d009b;
- 	text-align:center;
- 	clear:both;
- }
 
- h3{
-  color:#1d009b;
-  text-align:center;
-  clear:both;
- }
-  #quote {
- 	color:#1d009b;
- }
+h3{
+	color:#1d009b;
+	text-align:center;
+	clear:both;
+}
+#quote {
+	color:#1d009b;
+}
 
- .rm_line:link {
-  text-decoration: none;
- }
+.rm_line:link {
+	text-decoration: none;
+}
 
 .button {
 	color: black;
@@ -94,11 +95,6 @@ nav {
 .save_changes {
 	background-color: #ffa429;
 	color: black;
-}
-
-.flex-grid {
-  display: flex;
-  padding: 30px;
 }
 
 .row {
@@ -141,8 +137,10 @@ nav {
 }
 
 #map-tooltips {
+	height: 65vh;
 	margin-top: 15px;
-	border-top: 5px solid black
+	margin-bottom: 0px;
+	border: 5px solid black
 }
 .form_container{
 	background: #ff3e3e;
@@ -157,4 +155,7 @@ nav {
 }
 .profile-image {
   width: 150px;
+}
+.show {
+	margin-top: 5vh;
 }
