@@ -3,7 +3,7 @@
     <div class="user four columns">
       <div class="user_name">Hello <%= @user.name %>!</div>
       <ul>
-        <%= image_tag @user.avatar.url(:thumb), class: 'profile-image' %>
+        <%= image_tag @user.avatar.url(:thumb) || File.open(File.join(Rails.root, 'db', 'fixtures', 'red-creature-icon.png')), class: 'profile-image' %>
         <h4><b>Current City:</b><br><%= @user.current_city%></h4>
         <%= link_to edit_user_path, class: "rm_line" do %>
           <% if current_user && current_user == @user %>
