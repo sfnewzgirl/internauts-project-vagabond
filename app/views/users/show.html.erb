@@ -19,8 +19,10 @@
       <% user.reverse.each do |post| %>
         <%= link_to post.title, post_path(post) %>
         <div class="glyph">
-          <%= image_tag("Pencil.png", border: 0) %>
-          <%= image_tag("Bin.png", border: 0) %>
+          <% if current_user && current_user == @user %>
+            <%= link_to image_tag("Pencil.png", border: 0), edit_post_path(post.city_id, post.id) %>
+            <%= link_to image_tag("Bin.png", border: 0), delete_post_path(post.id), method: "delete", data: {confirm: "Are you sure you want to delete this post?"}%>
+          <% end %>
         </div>
         <hr>
       <% end %>
