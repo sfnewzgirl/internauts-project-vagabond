@@ -1,5 +1,5 @@
 <h2>Edit <%= @user.name%></h2>
-<div class="form_container">
+<div class="form_container six columns offset-by-three columns">
   <div class="form">
 
 
@@ -16,13 +16,13 @@
   <%= f.label :avatar %>
   <%= f.file_field :avatar %> <br>
 
-  <%= f.submit "Save Edits"%>
+  <%= f.submit "Save Edits", :class => 'button save_changes'%>
 
   <% end %>
-
+  </div>
 
       <%= link_to user_path, class: "rm_line" do %>
         <div class="button user_back_btn">Back</div>
       <% end %>
-  </div>
+
 </div>

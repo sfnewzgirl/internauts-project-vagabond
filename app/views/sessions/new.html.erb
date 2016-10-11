@@ -1,6 +1,9 @@
 <h2>Welcome Back!</h2>
-
-<div class="form_container">
+<% flash.each do |name, msg| %>
+  <div class="error"><%= msg %></div>
+  <br>
+<% end %>
+<div class="form_container six columns offset-by-three columns">
   <div class="form">
     <%= form_for @user, url: '/sessions', method: 'post' do |f| %>
 
@@ -11,7 +14,7 @@
       <%= f.password_field :password, placeholder: "Password"  %> <br>
 
 
-      <%= f.submit "Log in"%>
+      <%= f.submit "Log in", :class => 'button save_changes'%>
 
     <% end %>
   </div>

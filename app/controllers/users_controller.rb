@@ -15,7 +15,7 @@ class UsersController < ApplicationController
       login(user)
       redirect_to user_path(user.id)
     else
-      flash[:sign_up_error] = "Something went wrong, please try again"
+      flash[:sign_up_error] = "That email has already been taken."
       redirect_to new_user_path
     end
   end
