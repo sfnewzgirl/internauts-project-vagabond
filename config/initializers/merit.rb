@@ -1,22 +1,23 @@
 # Use this hook to configure merit parameters
 Merit.setup do |config|
   # Check rules on each request or in background
-  # config.checks_on_each_request = true
+  config.checks_on_each_request = true
 
   # Define ORM. Could be :active_record (default) and :mongoid
   # config.orm = :active_record
 
   # Add application observers to get notifications when reputation changes.
   # config.add_observer 'MyObserverClassName'
+  config.add_observer 'ReputationChangeObserver'
 
   # Define :user_model_name. This model will be used to grand badge if no
   # `:to` option is given. Default is 'User'.
-  # config.user_model_name = 'User'
+  config.user_model_name = 'User'
 
   # Define :current_user_method. Similar to previous option. It will be used
   # to retrieve :user_model_name object if no `:to` option is given. Default
   # is "current_#{user_model_name.downcase}".
-  # config.current_user_method = 'current_user'
+  config.current_user_method = 'current_user'
 end
 
 # Create application badges (uses https://github.com/norman/ambry)
@@ -32,28 +33,29 @@ end
 #   Merit::Badge.create! attrs
 # end
 
-Merit::Badge.create(
-  id: 01,
+Merit::Badge.create!(
+  id: 1,
   name: "new-member",
   description: "Joined Vagabond"
+  custom_fields: { img_url: 'assests/images/member_badge.png'}
 )
-Merit::Badge.create(
-  id: 02,
+Merit::Badge.create!(
+  id: 2,
   name: "three-cities",
   description: "Wrote a post for 3 cities"
 )
-Merit::Badge.create(
-  id: 1,
+Merit::Badge.create!(
+  id: 3,
   name: "sf-post",
   description: "Wrote a post for San Francisco"
 )
-Merit::Badge.create(
-  id: 2,
+Merit::Badge.create!(
+  id: 4,
   name: "london-post",
   description: "Wrote a post for London"
 )
-Merit::Badge.create(
-  id: 3,
+Merit::Badge.create!(
+  id: 5,
   name: "gibraltar-post",
   description: "Wrote a post for Gibraltar"
 )
