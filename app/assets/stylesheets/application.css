@@ -126,7 +126,7 @@ h3{
 	border-color: black;
 	font-size: 1em;
 }
-.edit_user, .new_user, .new_post {
+.edit_user, .new_user, .new_post, .edit_post {
 	display: flex;
 	justify-content: center;
 	flex-direction: column;
