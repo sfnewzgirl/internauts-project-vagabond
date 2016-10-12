@@ -24,4 +24,3 @@ module VagabondApp
   end
 end
 
-config.serve_static_assets = true
