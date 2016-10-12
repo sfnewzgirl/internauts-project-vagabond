@@ -33,9 +33,10 @@ gem 'skeleton-rails', :git => 'https://github.com/helios-technologies/skeleton-r
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 gem "paperclip", git: "git://github.com/thoughtbot/paperclip.git"
+gem 'rails_12factor', group: :production
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug', platform: :mri
+gem 'byebug', platform: :mri
 end
 
 group :development do
