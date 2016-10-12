@@ -54,9 +54,9 @@ City.create({
 x = 1
 3.times do
 	Post.create({
-		title: "Some Title" + " " + x.to_s,
+		title: 'Best Food',
 	  	author: 'Misha LeClair',
-	  	content: FFaker::HipsterIpsum.paragraph,
+	  	content: FFaker::BaconIpsum.paragraph,
 	  	user_id: 1,
 	  	city_id: x
 	  	})
@@ -66,9 +66,9 @@ end
 y = 1
 3.times do
 	Post.create({
-		title: 'Some Title' + " "  + y.to_s,
+		title: 'Best Hospitals',
 	  	author: 'Zach Fong',
-	  	content: FFaker::HipsterIpsum.paragraph,
+	  	content: FFaker::HealthcareIpsum.paragraph,
 	  	user_id: 2,
 	  	city_id: y
 	  	})
@@ -78,7 +78,7 @@ end
 z = 1
 3.times do
 	Post.create({
-		title: 'Some Title' + " "  + z.to_s,
+		title: 'Best Hipster Neighborhoods',
 	  	author: 'Mikey Rogachevsky',
 	  	content: FFaker::HipsterIpsum.paragraph,
 	  	user_id: 3,
@@ -90,11 +90,11 @@ end
 a = 1
 3.times do
 	Post.create({
-		title: 'Some Title' + " "  + a.to_s,
+		title: 'Best Music Venues',
 	  	author: 'Sera Bak',
-	  	content: FFaker::HipsterIpsum.paragraph,
+	  	content: FFaker::DizzleIpsum.paragraph,
 	  	user_id: 4,
 	  	city_id: a
 	  	})
-	z += 1
+	a += 1
 end
