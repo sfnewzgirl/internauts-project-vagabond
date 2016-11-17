@@ -34,21 +34,19 @@ users = User.create([
 
 ])
 
-
-
 City.create({
 	name: 'San Francisco',
-	photo: 'SF.jpeg'
+	photo: 'http://i.imgur.com/ajX0DZy.jpg'
 	})
 
 City.create({
 	name: 'London',
-	photo: 'london.jpeg'
+	photo: 'http://i.imgur.com/WCqGb9A.jpg'
 	})
 
 City.create({
 	name: 'Gibraltar',
-	photo: 'gibraltar.jpeg'
+	photo: 'http://i.imgur.com/m5el2ZK.jpg'
 	})
 
 x = 1
@@ -56,7 +54,7 @@ x = 1
 	Post.create({
 		title: 'Best Food',
 	  	author: 'Misha LeClair',
-	  	content: FFaker::BaconIpsum.paragraph,
+	  	content: FFaker::Lorem.paragraph,
 	  	user_id: 1,
 	  	city_id: x
 	  	})
@@ -68,7 +66,7 @@ y = 1
 	Post.create({
 		title: 'Best Hospitals',
 	  	author: 'Zach Fong',
-	  	content: FFaker::HealthcareIpsum.paragraph,
+	  	content: FFaker::Lorem.paragraph,
 	  	user_id: 2,
 	  	city_id: y
 	  	})
@@ -80,7 +78,7 @@ z = 1
 	Post.create({
 		title: 'Best Hipster Neighborhoods',
 	  	author: 'Mikey Rogachevsky',
-	  	content: FFaker::HipsterIpsum.paragraph,
+	  	content: FFaker::Lorem.paragraph,
 	  	user_id: 3,
 	  	city_id: z
 	  	})
@@ -92,7 +90,7 @@ a = 1
 	Post.create({
 		title: 'Best Music Venues',
 	  	author: 'Sera Bak',
-	  	content: FFaker::DizzleIpsum.paragraph,
+	  	content: FFaker::Lorem.paragraph,
 	  	user_id: 4,
 	  	city_id: a
 	  	})
