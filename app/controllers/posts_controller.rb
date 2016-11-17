@@ -22,16 +22,10 @@ class PostsController < ApplicationController
       else
         render 'new'
       end
-
-    #  @post.user = current_user
-    #  post = post_params.merge({author: current_user.name})
     else
      flash[:create_post_error] = "Please log in."
      redirect_to login_path
     end
-
-# author: current_user.name,
-
   end
 
   def edit
@@ -65,9 +59,6 @@ class PostsController < ApplicationController
     city_id = @post.city_id
     @post.delete
     redirect_to user_path(@user)
-    # user_id = current_user.id
-    # user = User.find_by(id: user_id)
-
   end
 
   private
